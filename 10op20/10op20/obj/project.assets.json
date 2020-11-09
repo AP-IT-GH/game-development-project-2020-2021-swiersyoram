@@ -7324,9 +7324,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yoram\\OneDrive - AP Hogeschool Antwerpen\\Semester 3\\game-development-project-2020-2021-swiersyoram\\10op20\\10op20\\10op20.csproj",
-      "projectName": "10op20",
-      "projectPath": "C:\\Users\\yoram\\OneDrive - AP Hogeschool Antwerpen\\Semester 3\\game-development-project-2020-2021-swiersyoram\\10op20\\10op20\\10op20.csproj",
+      "projectUniqueName": "C:\\Users\\yoram\\OneDrive - AP Hogeschool Antwerpen\\Semester 3\\game-development-project-2020-2021-swiersyoram\\10op20\\10op20\\IronManGame.csproj",
+      "projectName": "IronManGame",
+      "projectPath": "C:\\Users\\yoram\\OneDrive - AP Hogeschool Antwerpen\\Semester 3\\game-development-project-2020-2021-swiersyoram\\10op20\\10op20\\IronManGame.csproj",
       "packagesPath": "C:\\Users\\yoram\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\yoram\\OneDrive - AP Hogeschool Antwerpen\\Semester 3\\game-development-project-2020-2021-swiersyoram\\10op20\\10op20\\obj\\",
       "projectStyle": "PackageReference",

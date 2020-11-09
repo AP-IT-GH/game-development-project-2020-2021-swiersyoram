@@ -5,8 +5,10 @@
   <Config />
   <SourceFiles>
     <File>C:/Users/yoram/OneDrive - AP Hogeschool Antwerpen/Semester 3/game-development-project-2020-2021-swiersyoram/10op20/10op20/Content/ironman.png</File>
+    <File>C:/Users/yoram/OneDrive - AP Hogeschool Antwerpen/Semester 3/game-development-project-2020-2021-swiersyoram/10op20/10op20/Content/sprites.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>

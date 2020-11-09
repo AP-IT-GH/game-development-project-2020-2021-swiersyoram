@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/yoram/OneDrive - AP Hogeschool Antwerpen/Semester 3/game-development-project-2020-2021-swiersyoram/10op20/10op20/Content/ironman.png</SourceFile>
-  <SourceTime>2020-11-08T21:06:56.1021835+01:00</SourceTime>
-  <DestFile>C:/Users/yoram/OneDrive - AP Hogeschool Antwerpen/Semester 3/game-development-project-2020-2021-swiersyoram/10op20/10op20/Content/bin/Windows/ironman.xnb</DestFile>
-  <DestTime>2020-11-09T15:54:18.5928028+01:00</DestTime>
+  <SourceFile>C:/Users/yoram/OneDrive - AP Hogeschool Antwerpen/Semester 3/game-development-project-2020-2021-swiersyoram/10op20/10op20/Content/sprites.png</SourceFile>
+  <SourceTime>2020-11-09T15:56:56.2319412+01:00</SourceTime>
+  <DestFile>C:/Users/yoram/OneDrive - AP Hogeschool Antwerpen/Semester 3/game-development-project-2020-2021-swiersyoram/10op20/10op20/Content/bin/Windows/sprites.xnb</DestFile>
+  <DestTime>2020-11-09T15:57:30.3251678+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T16:17:54+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

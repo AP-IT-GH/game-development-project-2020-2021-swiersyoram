@@ -2,27 +2,34 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
+
+
 namespace _10op20
 {
-    public class Game1 : Game
+    public class game : Game
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         private Texture2D texture;
-        private Rectangle deelRectangle;
-        private int rectangleX = 0;
+        private Rectangle heroViewRectangle;
+        private int[] heroX = {160,320,480,320};
+        private int heroRunningCounter = 0;
+        private int counter = 0;
 
-        public Game1()
+        public game()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+            _graphics.PreferredBackBufferWidth = 1620;  // set this value to the desired width of your window
+            _graphics.PreferredBackBufferHeight = 880;   // set this value to the desired height of your window
+            _graphics.ApplyChanges();
         }
 
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            deelRectangle = new Rectangle(rectangleX, 0, 128,136);
+            heroViewRectangle = new Rectangle(heroX[0], 0, 160,160);
 
             base.Initialize();
         }
@@ -30,7 +37,7 @@ namespace _10op20
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            texture = Content.Load<Texture2D>("ironman");
+            texture = Content.Load<Texture2D>("sprites");
             // TODO: use this.Content to load your game content here
         }
 
@@ -48,16 +55,24 @@ namespace _10op20
         {
             GraphicsDevice.Clear(Color.Gray);
             _spriteBatch.Begin();
-            _spriteBatch.Draw(texture, new Vector2(10, 10), deelRectangle, Color.White);
+            _spriteBatch.Draw(texture, new Vector2(10, 400), heroViewRectangle, Color.White);
             _spriteBatch.End();
-
-            rectangleX += 128;
-            
-            if (rectangleX > 512 )
+            counter++;
+            if (counter == 10)
             {
-                rectangleX = 0;
+                counter = 0;
+                if(heroRunningCounter>3)
+                {
+                    heroRunningCounter = 0;
+                }
+                heroViewRectangle.X = heroX[heroRunningCounter];
+                heroRunningCounter++;
             }
-            deelRectangle.X = rectangleX;
+            
+                
+            
+            
+           
 
             // TODO: Add your drawing code here
 

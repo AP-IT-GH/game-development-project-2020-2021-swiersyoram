@@ -7,8 +7,9 @@ namespace _10op20
         [STAThread]
         static void Main()
         {
-            using (var game = new Game1())
+            using (var game = new game())
                 game.Run();
+
         }
     }
 }
