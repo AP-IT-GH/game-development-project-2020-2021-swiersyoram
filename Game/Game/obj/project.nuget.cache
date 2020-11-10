@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ov8sSCN7znPlpV/CxWonPypmWZRKJv6Ml89mUohMION/wOGcjwEm4W2HBEJuV0yH3uJnFdIH/0lkACCJoIRgGg==",
+  "dgSpecHash": "3swRrn8102ya7L2zCxtwSdg/5k7ez1wx2qKnMkdJ7MkQcrj0QOxNlTdxcvq7HbHqrV02h9aSroBv80eC54xHQw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\yoram\\OneDrive - AP Hogeschool Antwerpen\\Semester 3\\game-development-project-2020-2021-swiersyoram\\10op20\\10op20\\IronManGame.csproj",
+  "projectFilePath": "C:\\Users\\yoram\\OneDrive - AP Hogeschool Antwerpen\\Semester 3\\game-development-project-2020-2021-swiersyoram\\Game\\Game\\IronManGame.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yoram\\.nuget\\packages\\libuv\\1.9.1\\libuv.1.9.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.codeanalysis.analyzers\\1.1.0\\microsoft.codeanalysis.analyzers.1.1.0.nupkg.sha512",
