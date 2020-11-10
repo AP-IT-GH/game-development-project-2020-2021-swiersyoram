@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _10op20
+namespace IronManGame
 {
     public static class Program
     {

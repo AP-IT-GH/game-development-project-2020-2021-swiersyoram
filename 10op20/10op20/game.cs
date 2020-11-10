@@ -1,21 +1,18 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 
-
-
-namespace _10op20
+namespace IronManGame
 {
     public class game : Game
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         private Texture2D texture;
-        private Rectangle heroViewRectangle;
-        private int[] heroX = {160,320,480,320};
-        private int heroRunningCounter = 0;
-        private int counter = 0;
+        IronMan hero;
 
+   
         public game()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -29,7 +26,7 @@ namespace _10op20
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            heroViewRectangle = new Rectangle(heroX[0], 0, 160,160);
+           
 
             base.Initialize();
         }
@@ -38,16 +35,24 @@ namespace _10op20
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             texture = Content.Load<Texture2D>("sprites");
+
+            InitializeGameObjects();
             // TODO: use this.Content to load your game content here
         }
 
+        private void InitializeGameObjects()
+        {
+            hero = new IronMan(texture);
+        }
+
+        
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
             // TODO: Add your update logic here
-
+            hero.Update();
             base.Update(gameTime);
         }
 
@@ -55,20 +60,9 @@ namespace _10op20
         {
             GraphicsDevice.Clear(Color.Gray);
             _spriteBatch.Begin();
-            _spriteBatch.Draw(texture, new Vector2(10, 400), heroViewRectangle, Color.White);
+            hero.Draw(_spriteBatch);
             _spriteBatch.End();
-            counter++;
-            if (counter == 10)
-            {
-                counter = 0;
-                if(heroRunningCounter>3)
-                {
-                    heroRunningCounter = 0;
-                }
-                heroViewRectangle.X = heroX[heroRunningCounter];
-                heroRunningCounter++;
-            }
-            
+           
                 
             
             
