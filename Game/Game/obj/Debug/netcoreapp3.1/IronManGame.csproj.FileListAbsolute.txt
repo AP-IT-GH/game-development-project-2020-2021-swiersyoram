@@ -74,3 +74,4 @@ C:\Users\yoram\OneDrive - AP Hogeschool Antwerpen\Semester 3\game-development-pr
 C:\Users\yoram\OneDrive - AP Hogeschool Antwerpen\Semester 3\game-development-project-2020-2021-swiersyoram\Game\Game\obj\Debug\netcoreapp3.1\IronManGame.dll
 C:\Users\yoram\OneDrive - AP Hogeschool Antwerpen\Semester 3\game-development-project-2020-2021-swiersyoram\Game\Game\obj\Debug\netcoreapp3.1\IronManGame.pdb
 C:\Users\yoram\OneDrive - AP Hogeschool Antwerpen\Semester 3\game-development-project-2020-2021-swiersyoram\Game\Game\obj\Debug\netcoreapp3.1\IronManGame.genruntimeconfig.cache
+C:\Users\yoram\OneDrive - AP Hogeschool Antwerpen\Semester 3\game-development-project-2020-2021-swiersyoram\Game\Game\bin\Debug\netcoreapp3.1\Content\ironman_sprites.xnb

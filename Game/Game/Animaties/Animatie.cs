@@ -10,6 +10,7 @@ namespace IronManGame.Animaties
         public Rectangle currentframe { get; set; }
         private List<Rectangle> animatieFrames;
         private int counter = 0;
+        private double frameMovement = 0;
 
         public Animatie()
         {
@@ -21,11 +22,17 @@ namespace IronManGame.Animaties
             animatieFrames.Add(rectangleFrame);
         }
 
-        public void Update()
+        public void Update(GameTime gameTime)
         {
             currentframe = animatieFrames[counter];
-            counter++;
-            if(counter == animatieFrames.Count)
+            frameMovement += currentframe.Width * gameTime.ElapsedGameTime.TotalSeconds;
+            if(frameMovement >= currentframe.Width/10)
+            {
+                counter++;
+                frameMovement = 0;
+            }
+
+            if(counter >= animatieFrames.Count)
             {
                 counter = 0;
             }

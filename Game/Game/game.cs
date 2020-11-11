@@ -7,20 +7,29 @@ namespace IronManGame
 {
     public class game : Game
     {
-        private GraphicsDeviceManager _graphics;
+        private GraphicsDeviceManager _graphics ;
         private SpriteBatch _spriteBatch;
         private Texture2D texture;
-        IronMan hero;
+        private IronMan hero;
+        public int windowHeight = 880;
+        public int windowWidth = 1620;
+        private float timelast;
+        private float timenow;
+        private float elapsedFrameTimeInSeconds;
 
-   
+
+
         public game()
         {
             _graphics = new GraphicsDeviceManager(this);
+            
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
-            _graphics.PreferredBackBufferWidth = 1620;  // set this value to the desired width of your window
-            _graphics.PreferredBackBufferHeight = 880;   // set this value to the desired height of your window
+            _graphics.PreferredBackBufferWidth = windowWidth;  
+            _graphics.PreferredBackBufferHeight = windowHeight;
+           
             _graphics.ApplyChanges();
+            
         }
 
         protected override void Initialize()
@@ -34,15 +43,17 @@ namespace IronManGame
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            texture = Content.Load<Texture2D>("sprites");
+            texture = Content.Load<Texture2D>("ironman_sprites");
 
             InitializeGameObjects();
-            // TODO: use this.Content to load your game content here
+        
         }
 
         private void InitializeGameObjects()
         {
-            hero = new IronMan(texture);
+            hero = new IronMan(texture, GraphicsDevice) ;
+            
+
         }
 
         
@@ -51,8 +62,8 @@ namespace IronManGame
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            // TODO: Add your update logic here
-            hero.Update();
+          
+            hero.Update(gameTime);
             base.Update(gameTime);
         }
 
@@ -62,13 +73,7 @@ namespace IronManGame
             _spriteBatch.Begin();
             hero.Draw(_spriteBatch);
             _spriteBatch.End();
-           
-                
-            
-            
-           
-
-            // TODO: Add your drawing code here
+        
 
             base.Draw(gameTime);
         }
