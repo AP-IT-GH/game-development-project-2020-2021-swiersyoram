@@ -13,7 +13,7 @@ using System.Text;
 
 namespace IronManGame.Input
 {
-    class KeyboardReader : Ikeyboard
+    class KeyboardReader : IKeyboard
     {
         private int ground;
         public string keuzeAnimatie;

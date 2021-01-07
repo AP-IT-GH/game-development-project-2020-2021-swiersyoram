@@ -1,1 +1,1 @@
-## Here will be all the info about this project
+## This will tell you more about the project 

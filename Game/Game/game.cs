@@ -10,7 +10,7 @@ namespace IronManGame
         private GraphicsDeviceManager _graphics ;
         private SpriteBatch _spriteBatch;
         private Texture2D texture;
-        private IronMan hero;
+        private Gamecharacter_hero hero;
         public int windowHeight = 880;
         public int windowWidth = 1620;
         private float timelast;
@@ -51,7 +51,7 @@ namespace IronManGame
 
         private void InitializeGameObjects()
         {
-            hero = new IronMan(texture, GraphicsDevice) ;
+            hero = new Gamecharacter_hero(texture, GraphicsDevice) ;
             
 
         }

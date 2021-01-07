@@ -12,11 +12,11 @@ using System.Text;
 
 namespace IronManGame
 {
-    public class IronMan : IGameObject
+    public class Gamecharacter_hero : IGameObject
     {
     
        
-        IronMan hero;
+        Gamecharacter_hero hero;
         Texture2D herotexture;
         Animatie runAnimatie;
         Animatie standingAnimatie;
@@ -30,7 +30,7 @@ namespace IronManGame
 
 
 
-        public IronMan(Texture2D texture, GraphicsDevice graphics)
+        public Gamecharacter_hero(Texture2D texture, GraphicsDevice graphics)
         {
             herotexture = texture;
 
