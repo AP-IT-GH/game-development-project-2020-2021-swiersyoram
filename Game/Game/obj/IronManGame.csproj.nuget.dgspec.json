@@ -1,24 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yoram\\OneDrive - AP Hogeschool Antwerpen\\Semester 3\\game-development-project-2020-2021-swiersyoram\\Game\\Game\\IronManGame.csproj": {}
+    "C:\\Repositories\\game-development-project-2020-2021-swiersyoram\\Game\\Game\\IronManGame.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yoram\\OneDrive - AP Hogeschool Antwerpen\\Semester 3\\game-development-project-2020-2021-swiersyoram\\Game\\Game\\IronManGame.csproj": {
+    "C:\\Repositories\\game-development-project-2020-2021-swiersyoram\\Game\\Game\\IronManGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yoram\\OneDrive - AP Hogeschool Antwerpen\\Semester 3\\game-development-project-2020-2021-swiersyoram\\Game\\Game\\IronManGame.csproj",
+        "projectUniqueName": "C:\\Repositories\\game-development-project-2020-2021-swiersyoram\\Game\\Game\\IronManGame.csproj",
         "projectName": "IronManGame",
-        "projectPath": "C:\\Users\\yoram\\OneDrive - AP Hogeschool Antwerpen\\Semester 3\\game-development-project-2020-2021-swiersyoram\\Game\\Game\\IronManGame.csproj",
+        "projectPath": "C:\\Repositories\\game-development-project-2020-2021-swiersyoram\\Game\\Game\\IronManGame.csproj",
         "packagesPath": "C:\\Users\\yoram\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yoram\\OneDrive - AP Hogeschool Antwerpen\\Semester 3\\game-development-project-2020-2021-swiersyoram\\Game\\Game\\obj\\",
+        "outputPath": "C:\\Repositories\\game-development-project-2020-2021-swiersyoram\\Game\\Game\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\yoram\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"

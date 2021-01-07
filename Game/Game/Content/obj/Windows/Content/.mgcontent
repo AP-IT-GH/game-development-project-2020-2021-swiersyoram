@@ -4,7 +4,7 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/yoram/OneDrive - AP Hogeschool Antwerpen/Semester 3/game-development-project-2020-2021-swiersyoram/Game/Game/Content/ironman_sprites.png</File>
+    <File>C:/Repositories/game-development-project-2020-2021-swiersyoram/Game/Game/Content/ironman_sprites.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
