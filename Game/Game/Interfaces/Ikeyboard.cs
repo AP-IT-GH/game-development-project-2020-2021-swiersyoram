@@ -5,7 +5,7 @@ using System.Text;
 
 namespace IronManGame.Input
 {
-    public interface Ikeyboard
+    public interface IKeyboard
     {
         void readInput();
     }

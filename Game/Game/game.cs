@@ -1,7 +1,10 @@
-﻿using Microsoft.Xna.Framework;
+﻿using IronManGame.Game_interface;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace IronManGame
 {
@@ -16,6 +19,9 @@ namespace IronManGame
         private float timelast;
         private float timenow;
         private float elapsedFrameTimeInSeconds;
+
+        private List<Button> _gameComponents;
+
 
 
 
@@ -35,7 +41,7 @@ namespace IronManGame
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-           
+            IsMouseVisible = true; 
 
             base.Initialize();
         }
@@ -45,8 +51,36 @@ namespace IronManGame
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             texture = Content.Load<Texture2D>("ironman_sprites");
 
+            var startBtn = new Button(Content.Load<Texture2D>("ironman_sprites"), Content.Load<SpriteFont>("File"))
+            {
+                position = new Vector2(350, 200),
+                Text = "start"
+            };
+            startBtn.Click += StartBtn_Click;
+            var quitBtn = new Button(Content.Load<Texture2D>("ironman_sprites"), Content.Load<SpriteFont>("File"))
+            {
+                position = new Vector2(350, 250),
+                Text = "quit"
+            };
+            quitBtn.Click += QuitBtn_Click;
+
+            _gameComponents = new List<Button>()
+            {
+                startBtn,
+                quitBtn,
+            };
+
             InitializeGameObjects();
         
+        }
+
+        private void QuitBtn_Click(object sender, EventArgs e)
+        {
+            Exit();
+        }
+
+        private void StartBtn_Click(object sender, EventArgs e)
+        {
         }
 
         private void InitializeGameObjects()
@@ -62,7 +96,9 @@ namespace IronManGame
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-          
+            foreach (var component in _gameComponents)
+                component.Update(gameTime);
+
             hero.Update(gameTime);
             base.Update(gameTime);
         }
@@ -73,7 +109,9 @@ namespace IronManGame
             _spriteBatch.Begin();
             hero.Draw(_spriteBatch);
             _spriteBatch.End();
-        
+
+            foreach (var component in _gameComponents)
+                component.Draw(gameTime, _spriteBatch);
 
             base.Draw(gameTime);
         }
