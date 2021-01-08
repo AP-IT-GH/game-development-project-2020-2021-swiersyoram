@@ -51,13 +51,13 @@ namespace IronManGame
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             texture = Content.Load<Texture2D>("ironman_sprites");
 
-            var startBtn = new Button(Content.Load<Texture2D>("ironman_sprites"), Content.Load<SpriteFont>("File"))
+            var startBtn = new Button(Content.Load<Texture2D>("btn"), Content.Load<SpriteFont>("File"))
             {
                 position = new Vector2(350, 200),
                 Text = "start"
             };
             startBtn.Click += StartBtn_Click;
-            var quitBtn = new Button(Content.Load<Texture2D>("ironman_sprites"), Content.Load<SpriteFont>("File"))
+            var quitBtn = new Button(Content.Load<Texture2D>("btn"), Content.Load<SpriteFont>("File"))
             {
                 position = new Vector2(350, 250),
                 Text = "quit"
@@ -81,6 +81,7 @@ namespace IronManGame
 
         private void StartBtn_Click(object sender, EventArgs e)
         {
+            Console.WriteLine("start");
         }
 
         private void InitializeGameObjects()
@@ -107,11 +108,12 @@ namespace IronManGame
         {
             GraphicsDevice.Clear(Color.Gray);
             _spriteBatch.Begin();
+            foreach (var component in _gameComponents)
+                component.Draw(gameTime, _spriteBatch);
             hero.Draw(_spriteBatch);
             _spriteBatch.End();
 
-            foreach (var component in _gameComponents)
-                component.Draw(gameTime, _spriteBatch);
+            
 
             base.Draw(gameTime);
         }

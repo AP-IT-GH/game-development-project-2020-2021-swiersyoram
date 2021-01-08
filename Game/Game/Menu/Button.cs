@@ -42,7 +42,7 @@ namespace IronManGame.Game_interface
             {
                 color = Color.Gray;
             }
-            spriteBatch.Begin();
+
             spriteBatch.Draw(_texture, rectangle, color);
             if (!string.IsNullOrEmpty(Text))
             {

@@ -4,9 +4,9 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>E:/Repositories/game-development-project-2020-2021/Game/Game/Content/btn.png</File>
-    <File>E:/Repositories/game-development-project-2020-2021/Game/Game/Content/File.spritefont</File>
-    <File>E:/Repositories/game-development-project-2020-2021/Game/Game/Content/ironman_sprites.png</File>
+    <File>C:/Repositories/game-development-project-2020-2021-swiersyoram/Game/Game/Content/btn.png</File>
+    <File>C:/Repositories/game-development-project-2020-2021-swiersyoram/Game/Game/Content/File.spritefont</File>
+    <File>C:/Repositories/game-development-project-2020-2021-swiersyoram/Game/Game/Content/ironman_sprites.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

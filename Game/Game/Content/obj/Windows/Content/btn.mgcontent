@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>E:/Repositories/game-development-project-2020-2021/Game/Game/Content/btn.png</SourceFile>
-  <SourceTime>2021-01-08T16:55:40.277906+01:00</SourceTime>
-  <DestFile>E:/Repositories/game-development-project-2020-2021/Game/Game/Content/bin/Windows/Content/btn.xnb</DestFile>
-  <DestTime>2021-01-08T17:34:19.4160478+01:00</DestTime>
+  <SourceFile>C:/Repositories/game-development-project-2020-2021-swiersyoram/Game/Game/Content/btn.png</SourceFile>
+  <SourceTime>2021-01-08T21:01:28.6869098+01:00</SourceTime>
+  <DestFile>C:/Repositories/game-development-project-2020-2021-swiersyoram/Game/Game/Content/bin/Windows/Content/btn.xnb</DestFile>
+  <DestTime>2021-01-08T21:02:14.9077766+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T16:17:54+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
