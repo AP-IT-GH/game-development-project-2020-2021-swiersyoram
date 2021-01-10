@@ -11,6 +11,17 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="NewFolder1\NewFolder\**" />
+    <Compile Remove="NewFolder\**" />
+    <EmbeddedResource Remove="NewFolder1\NewFolder\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
+    <None Remove="NewFolder1\NewFolder\**" />
+    <None Remove="NewFolder\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Menu\Menu.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Remove="C:\Users\yoram\.nuget\packages\monogame.framework.content.pipeline\3.8.0.1641\contentFiles\any\netstandard2.0\libmojoshader_64.dll" />
     <Content Remove="C:\Users\yoram\.nuget\packages\monogame.framework.content.pipeline\3.8.0.1641\contentFiles\any\netstandard2.0\mgfxc.deps.json" />
     <Content Remove="C:\Users\yoram\.nuget\packages\monogame.framework.content.pipeline\3.8.0.1641\contentFiles\any\netstandard2.0\mgfxc.dll" />
@@ -37,5 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstract classes\" />
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
 </Project>

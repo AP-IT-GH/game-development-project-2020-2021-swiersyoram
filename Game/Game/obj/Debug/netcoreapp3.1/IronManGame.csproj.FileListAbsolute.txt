@@ -240,3 +240,4 @@ E:\Repositories\game-development-project-2020-2021\Game\Game\bin\Debug\netcoreap
 E:\Repositories\game-development-project-2020-2021\Game\Game\bin\Debug\netcoreapp3.1\Content\cursor.xnb
 E:\Repositories\game-development-project-2020-2021\Game\Game\bin\Debug\netcoreapp3.1\Content\crosshairs.xnb
 E:\Repositories\game-development-project-2020-2021\Game\Game\bin\Debug\netcoreapp3.1\Content\cursorSprite.xnb
+E:\Repositories\game-development-project-2020-2021\Game\Game\bin\Debug\netcoreapp3.1\Content\raindrop.xnb
