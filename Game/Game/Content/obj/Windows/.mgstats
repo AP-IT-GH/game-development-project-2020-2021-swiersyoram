@@ -1,2 +1,2 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/yoram/OneDrive - AP Hogeschool Antwerpen/Semester 3/game-development-project-2020-2021-swiersyoram/Game/Game/Content/ironman_sprites.png","C:/Users/yoram/OneDrive - AP Hogeschool Antwerpen/Semester 3/game-development-project-2020-2021-swiersyoram/Game/Game/Content/bin/Windows/ironman_sprites.xnb","TextureProcessor","Texture2DContent",3259,409685,0,1307871
+"E:/Repositories/game-development-project-2020-2021/Game/Game/Content/cursorSprite.png","E:/Repositories/game-development-project-2020-2021/Game/Game/Content/bin/Windows/cursorSprite.xnb","TextureProcessor","Texture2DContent",3703,8857,0,130863

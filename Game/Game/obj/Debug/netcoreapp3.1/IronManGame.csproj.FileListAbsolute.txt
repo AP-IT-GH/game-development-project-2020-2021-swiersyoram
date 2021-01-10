@@ -234,3 +234,9 @@ C:\Repositories\game-development-project-2020-2021-swiersyoram\Game\Game\obj\Deb
 C:\Repositories\game-development-project-2020-2021-swiersyoram\Game\Game\obj\Debug\netcoreapp3.1\IronManGame.dll
 C:\Repositories\game-development-project-2020-2021-swiersyoram\Game\Game\obj\Debug\netcoreapp3.1\IronManGame.pdb
 C:\Repositories\game-development-project-2020-2021-swiersyoram\Game\Game\obj\Debug\netcoreapp3.1\IronManGame.genruntimeconfig.cache
+E:\Repositories\game-development-project-2020-2021\Game\Game\bin\Debug\netcoreapp3.1\Content\startscreen_background.xnb
+E:\Repositories\game-development-project-2020-2021\Game\Game\bin\Debug\netcoreapp3.1\Content\quitbutton.xnb
+E:\Repositories\game-development-project-2020-2021\Game\Game\bin\Debug\netcoreapp3.1\Content\startbutton.xnb
+E:\Repositories\game-development-project-2020-2021\Game\Game\bin\Debug\netcoreapp3.1\Content\cursor.xnb
+E:\Repositories\game-development-project-2020-2021\Game\Game\bin\Debug\netcoreapp3.1\Content\crosshairs.xnb
+E:\Repositories\game-development-project-2020-2021\Game\Game\bin\Debug\netcoreapp3.1\Content\cursorSprite.xnb

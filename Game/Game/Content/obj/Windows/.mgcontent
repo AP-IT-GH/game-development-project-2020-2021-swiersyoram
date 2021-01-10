@@ -4,9 +4,21 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/yoram/OneDrive - AP Hogeschool Antwerpen/Semester 3/game-development-project-2020-2021-swiersyoram/Game/Game/Content/ironman_sprites.png</File>
+    <File>E:/Repositories/game-development-project-2020-2021/Game/Game/Content/crosshairs.png</File>
+    <File>E:/Repositories/game-development-project-2020-2021/Game/Game/Content/cursorSprite.png</File>
+    <File>E:/Repositories/game-development-project-2020-2021/Game/Game/Content/File.spritefont</File>
+    <File>E:/Repositories/game-development-project-2020-2021/Game/Game/Content/ironman_sprites.png</File>
+    <File>E:/Repositories/game-development-project-2020-2021/Game/Game/Content/quitbutton.png</File>
+    <File>E:/Repositories/game-development-project-2020-2021/Game/Game/Content/startbutton.png</File>
+    <File>E:/Repositories/game-development-project-2020-2021/Game/Game/Content/startscreen_background.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>

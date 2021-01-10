@@ -8179,25 +8179,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\yoram\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\yoram\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Repositories\\game-development-project-2020-2021-swiersyoram\\Game\\Game\\IronManGame.csproj",
+      "projectUniqueName": "E:\\Repositories\\game-development-project-2020-2021\\Game\\Game\\IronManGame.csproj",
       "projectName": "IronManGame",
-      "projectPath": "C:\\Repositories\\game-development-project-2020-2021-swiersyoram\\Game\\Game\\IronManGame.csproj",
+      "projectPath": "E:\\Repositories\\game-development-project-2020-2021\\Game\\Game\\IronManGame.csproj",
       "packagesPath": "C:\\Users\\yoram\\.nuget\\packages\\",
-      "outputPath": "C:\\Repositories\\game-development-project-2020-2021-swiersyoram\\Game\\Game\\obj\\",
+      "outputPath": "E:\\Repositories\\game-development-project-2020-2021\\Game\\Game\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
         "C:\\Users\\yoram\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -8208,6 +8203,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -8219,6 +8215,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "MonoGame.Content.Builder.Task": {
             "target": "Package",
@@ -8255,7 +8252,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   },
