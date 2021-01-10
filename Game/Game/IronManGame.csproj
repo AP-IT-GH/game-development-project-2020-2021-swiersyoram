@@ -11,14 +11,6 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Remove="NewFolder1\NewFolder\**" />
-    <Compile Remove="NewFolder\**" />
-    <EmbeddedResource Remove="NewFolder1\NewFolder\**" />
-    <EmbeddedResource Remove="NewFolder\**" />
-    <None Remove="NewFolder1\NewFolder\**" />
-    <None Remove="NewFolder\**" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Remove="Menu\Menu.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -45,9 +37,5 @@
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="Content\Content.mgcb" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Abstract classes\" />
-    <Folder Include="NewFolder1\" />
   </ItemGroup>
 </Project>

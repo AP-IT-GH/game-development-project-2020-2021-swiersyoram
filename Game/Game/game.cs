@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using IronManGame.Interfaces;
+using IronManGame.Map;
 
 
 namespace IronManGame
@@ -18,11 +19,12 @@ namespace IronManGame
         //textures
         Texture2D _ironmanSprite;
         private Texture2D _startscreenBackground;
+        private Texture2D _levelBackground;
         private Texture2D _startBtn;
         private Texture2D _quitBtn;
         private Texture2D _mouseSprite;
         private Texture2D _rain;
-        private Rectangle startButton; 
+      
 
 
        
@@ -31,6 +33,8 @@ namespace IronManGame
         private Gamecharacter_hero hero;
         //menu
         private StartMenu _startMenu;
+        //level
+        private Level _levelOne;
 
 
 
@@ -70,10 +74,10 @@ namespace IronManGame
             //loading textures
             _ironmanSprite = Content.Load<Texture2D>("ironman_sprites");
             _startscreenBackground = Content.Load<Texture2D>("startscreen_background");
+            _levelBackground = Content.Load<Texture2D>("gamebackground");
             _startBtn = Content.Load<Texture2D>("startbutton");
             _quitBtn = Content.Load<Texture2D>("quitbutton");
             _mouseSprite = Content.Load<Texture2D>("cursorSprite");
-            startButton = new Rectangle(700, 550, 300, 120);
             _rain = Content.Load<Texture2D>("raindrop");
 
            
@@ -86,10 +90,10 @@ namespace IronManGame
         {
             //menu
             _startMenu = new StartMenu(_startscreenBackground, _startBtn,_quitBtn, _rain);
-
             //characters
             hero = new Gamecharacter_hero(_ironmanSprite, GraphicsDevice) ;
-
+            //level
+            _levelOne = new Level(_levelBackground);
             
            
 
@@ -146,6 +150,7 @@ namespace IronManGame
                     }
                 case "game":
                     {
+                        _levelOne.Draw(_spriteBatch);
                         hero.Draw(_spriteBatch);
                         break;
                     }

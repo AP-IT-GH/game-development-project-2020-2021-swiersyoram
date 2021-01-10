@@ -21,6 +21,7 @@ namespace IronManGame.Input
         public Vector2 positie;
         public Vector2 velocity = new Vector2(0,0);
         private bool hasjumped = false;
+        private bool jumpkey = false;
         public KeyboardReader(int groundY)
         {
             ground = groundY;
@@ -48,19 +49,23 @@ namespace IronManGame.Input
                 direction.X = -1;
             }
 
-           if (state.IsKeyDown(Keys.Up))
+           if (state.IsKeyDown(Keys.Up) && jumpkey==false)
             {
-                positie.Y -= 10f;
+
+                positie.Y -= 80f;
                 velocity.Y = -5f;
                 hasjumped = true;
-
-
+                jumpkey = true;
+            }
+            if (state.IsKeyUp(Keys.Up))
+            {
+                jumpkey = false;
             }
 
-            if (hasjumped == true)
+                if (hasjumped == true)
             {
-                float i = 1;
-                velocity.Y += 0.8f * i;
+                
+                velocity.Y += 0.3f ;
 
             }
 

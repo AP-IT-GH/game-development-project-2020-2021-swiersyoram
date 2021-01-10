@@ -16,7 +16,7 @@ namespace IronManGame.Menu
         {
             _rain = rain;
             
-            rainPosition = new Vector2(r.Next(0,800), r.Next(0,400));
+            rainPosition = new Vector2(r.Next(0,1600), r.Next(0,400));
         }
         public override void Update(GameTime gameTime)
         {

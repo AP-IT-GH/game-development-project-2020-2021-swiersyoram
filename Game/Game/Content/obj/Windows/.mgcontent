@@ -7,6 +7,7 @@
     <File>E:/Repositories/game-development-project-2020-2021/Game/Game/Content/crosshairs.png</File>
     <File>E:/Repositories/game-development-project-2020-2021/Game/Game/Content/cursorSprite.png</File>
     <File>E:/Repositories/game-development-project-2020-2021/Game/Game/Content/File.spritefont</File>
+    <File>E:/Repositories/game-development-project-2020-2021/Game/Game/Content/gamebackground.jpg</File>
     <File>E:/Repositories/game-development-project-2020-2021/Game/Game/Content/ironman_sprites.png</File>
     <File>E:/Repositories/game-development-project-2020-2021/Game/Game/Content/quitbutton.png</File>
     <File>E:/Repositories/game-development-project-2020-2021/Game/Game/Content/raindrop.png</File>
@@ -14,6 +15,7 @@
     <File>E:/Repositories/game-development-project-2020-2021/Game/Game/Content/startscreen_background.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
