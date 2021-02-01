@@ -44,9 +44,13 @@ namespace IronManGame
         //menu
         private StartMenu _startMenu;
         //level
+        private List<Rectangle> platformslvl1; 
         private Level _levelOne;
+        private List<Rectangle> platformslvl2;
+        private Level _levelTwo;
 
         //parameters
+        public static int level = 1;
         public static int ground;
         public static Vector2 heroStartPos;
         public static int windowHeight = 800;
@@ -94,6 +98,8 @@ namespace IronManGame
             _roadBackground = Content.Load<Texture2D>("floor");
             _platformBackground = Content.Load<Texture2D>("platform");
             _portalBackground = Content.Load<Texture2D>("portal");
+            platformslvl1 = new List<Rectangle>();
+            platformslvl2 = new List<Rectangle>();
 
 
             //extras
@@ -113,9 +119,26 @@ namespace IronManGame
             //menu
             _startMenu = new StartMenu(_startscreenBackground, _startBtn,_quitBtn, _rain);
             //level
-            _levelOne = new Level(_levelBackground, _roadBackground, _platformBackground, _portalBackground);
+            platformslvl1.Add(new Rectangle(300, 500, 200, 40));
+            platformslvl1.Add(new Rectangle(800, 300, 200, 40));
+            platformslvl1.Add(new Rectangle(1000, 300, 200, 40));
+            platformslvl1.Add(new Rectangle(1200, 300, 200, 40));
+            platformslvl1.Add(new Rectangle(1400, 300, 200, 40));
+            _levelOne = new Level(_levelBackground, _roadBackground, _platformBackground, _portalBackground,platformslvl1);
+
+
+            platformslvl2.Add(new Rectangle(300, 500, 200, 40));
+            platformslvl2.Add(new Rectangle(600, 300, 200, 40));
+            platformslvl2.Add(new Rectangle(1000, 400, 200, 40));
+            platformslvl2.Add(new Rectangle(1400, 300, 200, 40));
+
+            _levelTwo = new Level(_levelBackground, _roadBackground, _platformBackground, _portalBackground, platformslvl2);
+
+            Debug.WriteLine(_levelOne);
+            Debug.WriteLine(level);
+
             //characters
-            hero = new Gamecharacter_hero(_ironmanSprite, GraphicsDevice) ;
+            hero = new Gamecharacter_hero(_ironmanSprite, GraphicsDevice, platformslvl1) ;
             enemy = new Gamecharacter_enemy(_enemySprite, GraphicsDevice);
            
             
@@ -145,8 +168,25 @@ namespace IronManGame
                     }
                 case "game":
                     {
+                        switch (level)
+                        {
+                            case 1:
+                                {
+                                    _levelOne.Update(gameTime);
+                                    hero.Update(gameTime, platformslvl1 );
+                                    break;
+                                }
+                            case 2:
+                                {
+                                    _levelTwo.Update(gameTime);
+                                    hero.Update(gameTime, platformslvl2);
+                                    break;
+                                }
+
+
+                        }
                         _levelOne.Update(gameTime);
-                        hero.Update(gameTime);
+                        
                         enemy.Update(gameTime);
 
                         break; 
@@ -180,7 +220,22 @@ namespace IronManGame
                     }
                 case "game":
                     {
-                        _levelOne.Draw(_spriteBatch);
+                        switch (level)
+                        {
+                            case 1:
+                                {
+                                    _levelOne.Draw(_spriteBatch);
+                                    break;
+                                }
+                            case 2:
+                                {
+                                    _levelTwo.Draw(_spriteBatch);
+                                    break;
+                                }
+
+
+                        }
+
                         hero.Draw(_spriteBatch);
                         enemy.Draw(_spriteBatch);
                         break;

@@ -16,7 +16,7 @@ namespace IronManGame.Map
     class Layout
     {
         private Texture2D _platformBackground;
-        public static List<Rectangle> platforms;
+        private List<Rectangle> platforms;
         public static Vector2 portalposition = new Vector2(1500, 300);
         private Portal portal;
 
@@ -31,6 +31,7 @@ namespace IronManGame.Map
             platforms.Add(platform);
             
         }
+     
         public void Update(GameTime gameTime)
         {
             portal.Update(gameTime);

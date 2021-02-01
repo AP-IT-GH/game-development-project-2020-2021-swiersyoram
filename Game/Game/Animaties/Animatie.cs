@@ -26,7 +26,7 @@ namespace IronManGame.Animaties
         {
             currentframe = animatieFrames[counter];
             frameMovement += currentframe.Width * gameTime.ElapsedGameTime.TotalSeconds;
-            if(frameMovement >= currentframe.Width/5)
+            if(frameMovement >= currentframe.Width/10)
             {
                 counter++;
                 frameMovement = 0;

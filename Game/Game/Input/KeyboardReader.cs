@@ -15,7 +15,7 @@ using IronManGame.Map;
 
 namespace IronManGame.Input
 {
-    class KeyboardReader : IKeyboard
+    class KeyboardReader 
     {
         private int ground;
         public string keuzeAnimatie;
@@ -27,12 +27,12 @@ namespace IronManGame.Input
         private List<bool> onplatform;
         private int doublejump = 0;
         private List<Rectangle> layout;
-        public KeyboardReader(int groundY)
+        public KeyboardReader(int groundY, List<Rectangle> platforms)
         {
             ground = groundY;
             positie = game.heroStartPos;
             direction = new Vector2(0, 0);
-            layout = Map.Layout.platforms;
+            layout = platforms;
             onplatform = new List<bool>();
             foreach (var platform in layout)
             {
@@ -40,10 +40,10 @@ namespace IronManGame.Input
             }
         }
 
-        public void readInput()
+        public void readInput(List<Rectangle> _platforms)
         {
-            
-            
+            layout = _platforms;
+
             KeyboardState state = Keyboard.GetState();
             positie += velocity;
             if (state.IsKeyDown(Keys.Right))
@@ -122,7 +122,16 @@ namespace IronManGame.Input
                && positie.Y <= Map.Layout.portalposition.Y 
                )
             {
-                game._gameState = "start";
+                game.level++;
+                if (game.level > 2)
+                {
+                    game._gameState = "exit";
+                }
+                else
+                {
+                    game._gameState = "start";
+                }
+                
             }
             
 

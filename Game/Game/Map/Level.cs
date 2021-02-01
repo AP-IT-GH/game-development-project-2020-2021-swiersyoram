@@ -12,21 +12,23 @@ namespace IronManGame.Map
         private Texture2D _background;
         private Texture2D _roadbackground;
         private Layout layout;
-        public Level(Texture2D background, Texture2D roadbackground, Texture2D platformbackground, Texture2D portalbackground)
+        public Level(Texture2D background, Texture2D roadbackground, Texture2D platformbackground, Texture2D portalbackground , List<Rectangle> platforms)
         {
             _background = background;
             _roadbackground = roadbackground;
             
 
             layout = new Layout(platformbackground, portalbackground);
-            layout.addPlatform(new Rectangle(300, 500, 200, 40));
-            layout.addPlatform(new Rectangle(800, 300, 200, 40));
-            layout.addPlatform(new Rectangle(1000, 300, 200, 40));
-            layout.addPlatform(new Rectangle(1200, 300, 200, 40));
-            layout.addPlatform(new Rectangle(1400, 300, 200, 40));
+            foreach (var platform in platforms)
+            {
+                layout.addPlatform(platform);
+               
+            }
 
 
         }
+    
+
         public void Update(GameTime gameTime)
         {
             layout.Update(gameTime);

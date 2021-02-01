@@ -14,14 +14,14 @@ using System.Diagnostics;
 
 namespace IronManGame
 {
-    public class Gamecharacter_hero : IGameObject
+    public class Gamecharacter_hero 
     {
     
        
-        Gamecharacter_hero hero;
-        Texture2D herotexture;
-        Animatie runAnimatie;
-        Animatie standingAnimatie;
+        
+        private Texture2D herotexture;
+        private Animatie runAnimatie;
+        private Animatie standingAnimatie;
         private Animatie gekozenAnimatie;
         
         private SpriteEffects spriterichting;
@@ -32,7 +32,7 @@ namespace IronManGame
 
 
 
-        public Gamecharacter_hero(Texture2D texture, GraphicsDevice graphics)
+        public Gamecharacter_hero(Texture2D texture, GraphicsDevice graphics, List<Rectangle> platforms)
         {
             herotexture = texture;
 
@@ -52,7 +52,7 @@ namespace IronManGame
 
             
 
-            input = new KeyboardReader(game.ground);
+            input = new KeyboardReader(game.ground, platforms);
             
         
 
@@ -62,9 +62,9 @@ namespace IronManGame
             input.setposition(game.heroStartPos);
         }
 
-        public void Update(GameTime gameTime)
+        public void Update(GameTime gameTime, List<Rectangle> platforms)
         {
-            input.readInput();
+            input.readInput(platforms);
 
 
             _positie = input.positie;
@@ -84,7 +84,7 @@ namespace IronManGame
         }
         public void Draw(SpriteBatch _spriteBatch)
         {
-            Debug.WriteLine(_positie);
+            
             _spriteBatch.Draw(herotexture, _positie, gekozenAnimatie.currentframe, Color.White, 0f, new Vector2(80,160),0.5f, spriterichting, 0f);
         }
 
