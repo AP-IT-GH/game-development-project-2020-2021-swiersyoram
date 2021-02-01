@@ -237,8 +237,12 @@ E:\Repositories\game-development-project-2020-2021\Game\Game\bin\Debug\netcoreap
 E:\Repositories\game-development-project-2020-2021\Game\Game\bin\Debug\netcoreapp3.1\Content\quitbutton.xnb
 E:\Repositories\game-development-project-2020-2021\Game\Game\bin\Debug\netcoreapp3.1\Content\startbutton.xnb
 E:\Repositories\game-development-project-2020-2021\Game\Game\bin\Debug\netcoreapp3.1\Content\cursor.xnb
-E:\Repositories\game-development-project-2020-2021\Game\Game\bin\Debug\netcoreapp3.1\Content\crosshairs.xnb
 E:\Repositories\game-development-project-2020-2021\Game\Game\bin\Debug\netcoreapp3.1\Content\cursorSprite.xnb
 E:\Repositories\game-development-project-2020-2021\Game\Game\bin\Debug\netcoreapp3.1\Content\raindrop.xnb
 E:\Repositories\game-development-project-2020-2021\Game\Game\bin\Debug\netcoreapp3.1\Content\gamebackground.xnb
 E:\Repositories\game-development-project-2020-2021\Game\Game\obj\Debug\netcoreapp3.1\IronManGame.csprojAssemblyReference.cache
+E:\Repositories\game-development-project-2020-2021\Game\Game\bin\Debug\netcoreapp3.1\Content\enemy sprites.xnb
+E:\Repositories\game-development-project-2020-2021\Game\Game\bin\Debug\netcoreapp3.1\Content\enemySprites.xnb
+E:\Repositories\game-development-project-2020-2021\Game\Game\bin\Debug\netcoreapp3.1\Content\floor.xnb
+E:\Repositories\game-development-project-2020-2021\Game\Game\bin\Debug\netcoreapp3.1\Content\platform.xnb
+E:\Repositories\game-development-project-2020-2021\Game\Game\bin\Debug\netcoreapp3.1\Content\portal.xnb

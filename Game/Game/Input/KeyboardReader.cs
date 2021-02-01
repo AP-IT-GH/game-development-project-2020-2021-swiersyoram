@@ -6,10 +6,12 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Diagnostics.PerformanceData;
 using System.Reflection.Metadata.Ecma335;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using IronManGame.Map;
 
 namespace IronManGame.Input
 {
@@ -22,11 +24,20 @@ namespace IronManGame.Input
         public Vector2 velocity = new Vector2(0,0);
         private bool hasjumped = false;
         private bool jumpkey = false;
+        private List<bool> onplatform;
+        private int doublejump = 0;
+        private List<Rectangle> layout;
         public KeyboardReader(int groundY)
         {
             ground = groundY;
-            positie = new Vector2(0, ground);
+            positie = game.heroStartPos;
             direction = new Vector2(0, 0);
+            layout = Map.Layout.platforms;
+            onplatform = new List<bool>();
+            foreach (var platform in layout)
+            {
+                onplatform.Add(false);
+            }
         }
 
         public void readInput()
@@ -37,25 +48,26 @@ namespace IronManGame.Input
             positie += velocity;
             if (state.IsKeyDown(Keys.Right))
             {
-                positie.X += 10;
+                positie.X += 5;
                 keuzeAnimatie = "runAnimatie";
                 direction.X = 1;
             }
 
             if (state.IsKeyDown(Keys.Left))
             {
-                positie.X -= 10;
+                positie.X -= 5;
                 keuzeAnimatie = "runAnimatie";
                 direction.X = -1;
             }
 
-           if (state.IsKeyDown(Keys.Up) && jumpkey==false)
+            if (state.IsKeyDown(Keys.Up) && jumpkey == false && doublejump < 2)
             {
 
-                positie.Y -= 80f;
-                velocity.Y = -5f;
+                positie.Y -= 10f;
+                velocity.Y = -16f;
                 hasjumped = true;
                 jumpkey = true;
+                doublejump++;
             }
             if (state.IsKeyUp(Keys.Up))
             {
@@ -64,8 +76,7 @@ namespace IronManGame.Input
 
                 if (hasjumped == true)
             {
-                
-                velocity.Y += 0.3f ;
+                velocity.Y += 0.8f ;
 
             }
 
@@ -73,10 +84,58 @@ namespace IronManGame.Input
             {
                 velocity.Y = 0f;
             }
+
+            int i = 0;
+            foreach (var platforms in layout)
+            {
+               
+                
+                if (positie.Y <= platforms.Y && positie.X > platforms.X && positie.X < platforms.X+platforms.Width)
+                {
+                   
+                    onplatform[i] = true;
+
+                }
+                if (onplatform[i] == true && positie.Y >= platforms.Y)
+                {
+                    if (positie.X > platforms.X && positie.X < platforms.X + platforms.Width)
+                    {
+                        positie.Y = platforms.Y;
+                        hasjumped = false;
+                        doublejump = 0;
+
+                    }
+                    else
+                    {
+                        onplatform[i] = false;
+                        hasjumped = true;
+                    }
+
+                }
+                i++;
+            }
+          
+
+            if (positie.X > Map.Layout.portalposition.X 
+                && positie.X < Map.Layout.portalposition.X+50
+               && positie.Y > Map.Layout.portalposition.Y - 120
+               && positie.Y <= Map.Layout.portalposition.Y 
+               )
+            {
+                game._gameState = "start";
+            }
+            
+
+
+
+            
             if (positie.Y >= ground)
             {
-                hasjumped = false;
-                positie.Y = ground;
+
+                    hasjumped = false;
+                    positie.Y = ground;
+                    doublejump = 0;
+
             }
 
 
@@ -86,6 +145,13 @@ namespace IronManGame.Input
             }
 
             
+        }
+
+        public void setposition(Vector2 _positie)
+        {
+            positie = _positie;
+            
+
         }
     }
 }

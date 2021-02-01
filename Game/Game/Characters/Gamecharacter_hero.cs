@@ -1,4 +1,5 @@
 ﻿ using IronManGame.Animaties;
+using IronManGame;
 using IronManGame.Input;
 using IronManGame.Interfaces;
 using Microsoft.Xna.Framework;
@@ -9,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics.PerformanceData;
 using System.Text;
+using System.Diagnostics;
 
 namespace IronManGame
 {
@@ -21,9 +23,9 @@ namespace IronManGame
         Animatie runAnimatie;
         Animatie standingAnimatie;
         private Animatie gekozenAnimatie;
-        private int ground;
+        
         private SpriteEffects spriterichting;
-        private Vector2 positie;
+        private Vector2 _positie;
         private KeyboardReader input;
 
 
@@ -48,20 +50,24 @@ namespace IronManGame
 
             spriterichting = new SpriteEffects();
 
-            ground = graphics.Viewport.Height - 100;
+            
 
-            input = new KeyboardReader(ground);
+            input = new KeyboardReader(game.ground);
             
         
 
+        }
+        public void resetPosition()
+        {
+            input.setposition(game.heroStartPos);
         }
 
         public void Update(GameTime gameTime)
         {
             input.readInput();
- 
-            
-            positie = input.positie;
+
+
+            _positie = input.positie;
            
             if (input.keuzeAnimatie == "runAnimatie")
                 gekozenAnimatie = runAnimatie;
@@ -78,7 +84,8 @@ namespace IronManGame
         }
         public void Draw(SpriteBatch _spriteBatch)
         {
-            _spriteBatch.Draw(herotexture, positie, gekozenAnimatie.currentframe, Color.White, 0f, Vector2.Zero, 0.5f, spriterichting, 0f);
+            Debug.WriteLine(_positie);
+            _spriteBatch.Draw(herotexture, _positie, gekozenAnimatie.currentframe, Color.White, 0f, new Vector2(80,160),0.5f, spriterichting, 0f);
         }
 
     }
