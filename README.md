@@ -5,3 +5,5 @@ This game is a platform game with Iron man the movie character as hero. You have
  - capture coins
  - capture powerups to fly
  - dying form collision with enemy 
+ - adding ability to shoot 
+ - update/improve sprites
