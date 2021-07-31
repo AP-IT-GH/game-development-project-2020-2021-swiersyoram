@@ -55,7 +55,7 @@ namespace IronManGame
         public static Vector2 heroStartPos;
         public static int windowHeight = 800;
         public static int windowWidth = 1600;
-        public static string _gameState = "start";
+        public static string _gameState = "game";
         private MouseState _mouse;
        
 
