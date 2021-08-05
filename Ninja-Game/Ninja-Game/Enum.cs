@@ -12,4 +12,9 @@ namespace NinjaGame
         end
 
     }
+    enum characterState
+    {
+        idle,
+        running
+    }
 }

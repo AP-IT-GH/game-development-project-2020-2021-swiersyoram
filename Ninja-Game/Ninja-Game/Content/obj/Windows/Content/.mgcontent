@@ -5,9 +5,11 @@
   <Config />
   <SourceFiles>
     <File>E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/background.png</File>
+    <File>E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/girl-idle.png</File>
     <File>E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/girl-running.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>

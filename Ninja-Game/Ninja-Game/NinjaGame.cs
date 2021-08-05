@@ -52,7 +52,7 @@ namespace NinjaGame
 
                     break;
                 case gameState.running:
-                    runGame.update();
+                    runGame.update(gameTime);
                     break;
                 case gameState.pause:
                     break;

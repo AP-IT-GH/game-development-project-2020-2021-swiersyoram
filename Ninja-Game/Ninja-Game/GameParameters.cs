@@ -16,8 +16,11 @@ namespace NinjaGame
 
         //characters
         //ninjaGirl
+        public static int girlSpriteWidth = 2820;
+        public static int girlSpriteHeight = 390;
+        public static int girlWidth = 282;
         public static int girlHeight = 390;
-        public static double girlScale = 0.35;
+        public static double girlScale = 0.30;
         public static double girlScaledHeight = girlHeight * girlScale;
 
     }
