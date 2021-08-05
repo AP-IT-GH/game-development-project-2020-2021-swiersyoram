@@ -25,11 +25,11 @@ namespace NinjaGame.controller
             {
                 if (keyboard.IsKeyDown(Keys.Right))
                 {
-                    richting.X = 5;
+                    richting.X = 1;
                 }
                 if (keyboard.IsKeyDown(Keys.Left))
                 {
-                    richting.X = -5;
+                    richting.X = -1;
                 }
             }
             else

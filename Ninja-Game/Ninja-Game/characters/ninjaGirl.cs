@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using NinjaGame.animation;
+using NinjaGame.characters.movement;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -17,11 +18,8 @@ namespace NinjaGame.characters
 
         private Animation runningAnimation;
         private Animation idleAnimation;
-        private characterState characterstate = characterState.running;
-
-        private Vector2 positie;
-        private Vector2 snelheid;
-        private Vector2 versnelling;
+        private Movement charactermovement;
+      
 
 
 
@@ -32,13 +30,10 @@ namespace NinjaGame.characters
         {
             _spriteBatch = spritebatch;
             Content = content;
-           
+
+            charactermovement = new Movement(10);
             runningAnimation = new Animation(GameParameters.girlSpriteWidth, GameParameters.girlSpriteHeight, GameParameters.girlWidth,0.03);
-            idleAnimation = new Animation(2180, 375, 218, 0.05);
-            positie = new Vector2(0, (float)(GameParameters.windowHeight - GameParameters.girlScaledHeight - 50));
-            snelheid = new Vector2(5, 0);
-
-
+            idleAnimation = new Animation(2180, 375, 218, 0.1);
 
         }
 
@@ -48,25 +43,13 @@ namespace NinjaGame.characters
             _idleGirl = Content.Load<Texture2D>("girl-idle");
         }
 
-        private void move()
-        {
-            positie += snelheid;
-            if(snelheid.X == 0)
-            {
-                characterstate = characterState.idle;
-            }
-            else
-            {
-                characterstate = characterState.running;
-            }
+       
 
-        }
-
-        public void update(GameTime gameTime, Vector2 newspeed)
+        public void update(GameTime gameTime, Vector2 richting)
         {
-            snelheid = newspeed;
-            move();
-            switch (characterstate)
+            charactermovement.move(richting);
+            charactermovement.movestate();
+            switch (charactermovement.State)
             {
                 case characterState.idle:
                     idleAnimation.update(gameTime);
@@ -81,13 +64,13 @@ namespace NinjaGame.characters
 
         public void draw()
         {
-            switch (characterstate)
+            switch (charactermovement.State)
             {
                 case characterState.idle:
-                    _spriteBatch.Draw(_idleGirl, positie, idleAnimation.Frame, Color.White, 0f, Vector2.Zero, 0.35f, SpriteEffects.None, 0f);
+                    _spriteBatch.Draw(_idleGirl, charactermovement.Positie, idleAnimation.Frame, Color.White, 0f, Vector2.Zero, 0.35f, charactermovement.Direction, 0f);
                     break;
                 case characterState.running:
-                    _spriteBatch.Draw(_runningGirl, positie, runningAnimation.Frame, Color.White, 0f, Vector2.Zero, 0.35f, SpriteEffects.None, 0f);
+                    _spriteBatch.Draw(_runningGirl, charactermovement.Positie, runningAnimation.Frame, Color.White, 0f, Vector2.Zero, 0.35f, charactermovement.Direction, 0f);
                     break;
                 default:
                     break;
