@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WU6dbcpgrKZrNfawLpSSQ37HvbVCINmgV/Z0n7Zw+0GWC0xuDOMD4TRS9lS/Q/aUAL6YwaxcTO6FjX7RtuYE6Q==",
+  "dgSpecHash": "mYNCvzrxr8zS6B9vSIGasSfizSkymQHVpa7xBV0g+kwn8PIXOSn9eIAmarhVX31dlLdElywCz1LHMG5WceQ96w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\yoram\\OneDrive\\Bureaublad\\ironman game\\Game\\Game\\IronManGame.csproj",
+  "projectFilePath": "E:\\Repositories\\game-development-project-2020-2021\\old game\\ironman game\\Game\\Game\\IronManGame.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yoram\\.nuget\\packages\\assimpnet\\4.1.0\\assimpnet.4.1.0.nupkg.sha512",
     "C:\\Users\\yoram\\.nuget\\packages\\libuv\\1.9.1\\libuv.1.9.1.nupkg.sha512",

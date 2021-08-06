@@ -14,6 +14,9 @@ namespace NinjaGame
         public static gameState gamestate = gameState.running;
 
 
+        //map
+        public static int grond = 833;
+
         //characters
         //ninjaGirl
         public static int girlSpriteWidth = 2820;

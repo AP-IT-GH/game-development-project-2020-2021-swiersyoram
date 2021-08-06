@@ -9,14 +9,14 @@ using System.Text;
 
 namespace NinjaGame.controller
 {
-    class KeyboardReader
+    class KeyboardReader:IInputReader
     {
         private Vector2 richting;
         public KeyboardReader()
         {
             richting = new Vector2(0, 0);
         }
-        public Vector2 move()
+        public Vector2 Inputreader()
         {
             KeyboardState keyboard = Keyboard.GetState();
            
@@ -31,14 +31,22 @@ namespace NinjaGame.controller
                 {
                     richting.X = -1;
                 }
+                
             }
             else
             {
                 richting.X = 0;
             }
-            
-          
-            
+            if (keyboard.IsKeyDown(Keys.Up))
+            {
+                richting.Y = 1;
+            }
+            else
+            {
+                richting.Y = 0;
+            }
+
+
             return richting;
         }
     }

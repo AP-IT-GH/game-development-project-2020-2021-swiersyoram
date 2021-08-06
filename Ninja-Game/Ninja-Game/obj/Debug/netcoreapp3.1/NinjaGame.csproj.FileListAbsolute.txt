@@ -76,3 +76,5 @@ E:\Repositories\game-development-project-2020-2021-swiersyoram\Ninja-Game\Ninja-
 E:\Repositories\game-development-project-2020-2021-swiersyoram\Ninja-Game\Ninja-Game\obj\Debug\netcoreapp3.1\NinjaGame.dll
 E:\Repositories\game-development-project-2020-2021-swiersyoram\Ninja-Game\Ninja-Game\obj\Debug\netcoreapp3.1\NinjaGame.pdb
 E:\Repositories\game-development-project-2020-2021-swiersyoram\Ninja-Game\Ninja-Game\obj\Debug\netcoreapp3.1\NinjaGame.genruntimeconfig.cache
+E:\Repositories\game-development-project-2020-2021\Ninja-Game\Ninja-Game\bin\Debug\netcoreapp3.1\Content\girl-jump.xnb
+E:\Repositories\game-development-project-2020-2021\Ninja-Game\Ninja-Game\bin\Debug\netcoreapp3.1\Content\crate.xnb

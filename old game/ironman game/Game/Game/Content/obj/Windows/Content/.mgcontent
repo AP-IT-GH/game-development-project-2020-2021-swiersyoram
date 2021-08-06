@@ -4,18 +4,18 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/yoram/OneDrive/Bureaublad/ironman game/Game/Game/Content/cursorSprite.png</File>
-    <File>C:/Users/yoram/OneDrive/Bureaublad/ironman game/Game/Game/Content/enemySprites.png</File>
-    <File>C:/Users/yoram/OneDrive/Bureaublad/ironman game/Game/Game/Content/File.spritefont</File>
-    <File>C:/Users/yoram/OneDrive/Bureaublad/ironman game/Game/Game/Content/floor.png</File>
-    <File>C:/Users/yoram/OneDrive/Bureaublad/ironman game/Game/Game/Content/gamebackground.jpg</File>
-    <File>C:/Users/yoram/OneDrive/Bureaublad/ironman game/Game/Game/Content/ironman_sprites.png</File>
-    <File>C:/Users/yoram/OneDrive/Bureaublad/ironman game/Game/Game/Content/platform.png</File>
-    <File>C:/Users/yoram/OneDrive/Bureaublad/ironman game/Game/Game/Content/portal.png</File>
-    <File>C:/Users/yoram/OneDrive/Bureaublad/ironman game/Game/Game/Content/quitbutton.png</File>
-    <File>C:/Users/yoram/OneDrive/Bureaublad/ironman game/Game/Game/Content/raindrop.png</File>
-    <File>C:/Users/yoram/OneDrive/Bureaublad/ironman game/Game/Game/Content/startbutton.png</File>
-    <File>C:/Users/yoram/OneDrive/Bureaublad/ironman game/Game/Game/Content/startscreen_background.png</File>
+    <File>E:/Repositories/game-development-project-2020-2021/old game/ironman game/Game/Game/Content/cursorSprite.png</File>
+    <File>E:/Repositories/game-development-project-2020-2021/old game/ironman game/Game/Game/Content/enemySprites.png</File>
+    <File>E:/Repositories/game-development-project-2020-2021/old game/ironman game/Game/Game/Content/File.spritefont</File>
+    <File>E:/Repositories/game-development-project-2020-2021/old game/ironman game/Game/Game/Content/floor.png</File>
+    <File>E:/Repositories/game-development-project-2020-2021/old game/ironman game/Game/Game/Content/gamebackground.jpg</File>
+    <File>E:/Repositories/game-development-project-2020-2021/old game/ironman game/Game/Game/Content/ironman_sprites.png</File>
+    <File>E:/Repositories/game-development-project-2020-2021/old game/ironman game/Game/Game/Content/platform.png</File>
+    <File>E:/Repositories/game-development-project-2020-2021/old game/ironman game/Game/Game/Content/portal.png</File>
+    <File>E:/Repositories/game-development-project-2020-2021/old game/ironman game/Game/Game/Content/quitbutton.png</File>
+    <File>E:/Repositories/game-development-project-2020-2021/old game/ironman game/Game/Game/Content/raindrop.png</File>
+    <File>E:/Repositories/game-development-project-2020-2021/old game/ironman game/Game/Game/Content/startbutton.png</File>
+    <File>E:/Repositories/game-development-project-2020-2021/old game/ironman game/Game/Game/Content/startscreen_background.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

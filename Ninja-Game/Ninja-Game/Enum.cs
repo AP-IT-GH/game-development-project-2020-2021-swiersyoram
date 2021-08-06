@@ -15,6 +15,12 @@ namespace NinjaGame
     enum characterState
     {
         idle,
-        running
+        running,
+        jump
+    }
+    enum level
+    {
+        one,
+        two
     }
 }

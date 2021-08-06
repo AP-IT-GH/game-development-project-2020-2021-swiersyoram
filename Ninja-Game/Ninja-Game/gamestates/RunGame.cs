@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using NinjaGame.characters;
 using NinjaGame.controller;
+using NinjaGame.map;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,24 +15,26 @@ namespace NinjaGame.gamestates
     {
 
         private SpriteBatch _spriteBatch;
-        private ContentManager Content;
-        private Texture2D _gameBackground;
+      
+
         private IGameCharacter ninjaGirl;
 
-        private KeyboardReader keyboard;
+        private IInputReader keyboard;
+        private IMap maplayout;
 
 
         public RunGame(SpriteBatch spritebatch, ContentManager content){
             _spriteBatch = spritebatch;
-            Content = content;
             ninjaGirl = new NinjaGirl(spritebatch, content);
             keyboard = new KeyboardReader();
+            maplayout = new Map(spritebatch, content);
+            
             
         }
        
         public void load()
         {
-            _gameBackground = Content.Load<Texture2D>("background");
+            maplayout.load();
             ninjaGirl.load();
         }
 
@@ -39,14 +42,14 @@ namespace NinjaGame.gamestates
 
         public void update(GameTime gameTime)
         {
-            ninjaGirl.update(gameTime,keyboard.move());
+            ninjaGirl.update(gameTime, keyboard.Inputreader(), maplayout.layout());
 
         }
 
         public void draw()
         {
             _spriteBatch.Begin();
-            _spriteBatch.Draw(_gameBackground, new Rectangle(0, 0, GameParameters.windowWidth, GameParameters.windowHeight), Color.White);
+            maplayout.Draw();
             ninjaGirl.draw();
             _spriteBatch.End();
         }

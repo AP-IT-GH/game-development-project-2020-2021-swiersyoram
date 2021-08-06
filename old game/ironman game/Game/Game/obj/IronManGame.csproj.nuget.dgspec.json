@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yoram\\OneDrive\\Bureaublad\\ironman game\\Game\\Game\\IronManGame.csproj": {}
+    "E:\\Repositories\\game-development-project-2020-2021\\old game\\ironman game\\Game\\Game\\IronManGame.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yoram\\OneDrive\\Bureaublad\\ironman game\\Game\\Game\\IronManGame.csproj": {
+    "E:\\Repositories\\game-development-project-2020-2021\\old game\\ironman game\\Game\\Game\\IronManGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yoram\\OneDrive\\Bureaublad\\ironman game\\Game\\Game\\IronManGame.csproj",
+        "projectUniqueName": "E:\\Repositories\\game-development-project-2020-2021\\old game\\ironman game\\Game\\Game\\IronManGame.csproj",
         "projectName": "IronManGame",
-        "projectPath": "C:\\Users\\yoram\\OneDrive\\Bureaublad\\ironman game\\Game\\Game\\IronManGame.csproj",
+        "projectPath": "E:\\Repositories\\game-development-project-2020-2021\\old game\\ironman game\\Game\\Game\\IronManGame.csproj",
         "packagesPath": "C:\\Users\\yoram\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yoram\\OneDrive\\Bureaublad\\ironman game\\Game\\Game\\obj\\",
+        "outputPath": "E:\\Repositories\\game-development-project-2020-2021\\old game\\ironman game\\Game\\Game\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yoram\\AppData\\Roaming\\NuGet\\NuGet.Config",

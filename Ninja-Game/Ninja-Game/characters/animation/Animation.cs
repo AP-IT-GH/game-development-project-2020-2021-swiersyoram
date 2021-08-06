@@ -35,7 +35,7 @@ namespace NinjaGame.animation
                 animationframe.X += animationWidth;
                 if (animationframe.X > spriteWidth - animationWidth)
                 {
-                    animationframe.X = 0;
+                    animationframe.X =0;
                 }
                 PreviousTime = CurrentTime;
 
