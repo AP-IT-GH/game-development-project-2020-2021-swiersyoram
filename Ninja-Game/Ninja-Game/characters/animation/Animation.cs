@@ -1,11 +1,12 @@
 ﻿using Microsoft.Xna.Framework;
+using NinjaGame.characters.animation;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace NinjaGame.animation
 {
-    class Animation
+    class Animation:IAnimation
     {
         
         private int animationWidth;

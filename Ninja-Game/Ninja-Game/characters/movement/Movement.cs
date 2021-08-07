@@ -58,9 +58,10 @@ namespace NinjaGame.characters.movement
 
         private Platformdetection platformdetection;
         private objectdetection objectdetection;
+        private IGameCharacter character;
 
 
-        public Movement(ContentManager content, Vector2 startposition)
+        public Movement(ContentManager content, Vector2 startposition, IGameCharacter Character)
         {
             state = characterState.idle;
             runningAnimation = new Animation(GameParameters.girlSpriteWidth, GameParameters.girlSpriteHeight, GameParameters.girlWidth, 0.03);
@@ -70,6 +71,8 @@ namespace NinjaGame.characters.movement
 
             platformdetection = new Platformdetection();
             objectdetection = new objectdetection();
+
+            character = Character;
 
             positie = startposition;
             lastpos = startposition;
@@ -169,13 +172,15 @@ namespace NinjaGame.characters.movement
         {
             if(snelheid.X == 0 && richting.X == 0 && jump == false)
             {
-                state = characterState.idle;
+                    idleAnimation.update(gameTime);
+
                 animationframe = idleAnimation.Frame;
                 animationtexture = _idleGirl;
             }
             if (snelheid.X != 0 && jump == false)
             {
-                state = characterState.running;
+                runningAnimation.update(gameTime);
+
                 animationframe = runningAnimation.Frame;
 
                 animationtexture = _runningGirl;
@@ -183,26 +188,14 @@ namespace NinjaGame.characters.movement
             }
             if (snelheid.Y != 0)
             {
-                state = characterState.jump;
+                    jumpAnimation.update(gameTime);
+
                 animationframe = jumpAnimation.Frame;
 
                 animationtexture = _jumpGirl;
 
             }
-            switch (state)
-            {
-                case characterState.idle:
-                    idleAnimation.update(gameTime);
-                    break;
-                case characterState.running:
-                    runningAnimation.update(gameTime);
-                    break;
-                case characterState.jump:
-                    jumpAnimation.update(gameTime);
-                    break;
-                default:
-                    break;
-            }
+            
         }
 
         public void loadAnimations()

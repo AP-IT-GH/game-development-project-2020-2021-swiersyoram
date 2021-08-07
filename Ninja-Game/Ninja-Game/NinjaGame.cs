@@ -53,6 +53,9 @@ namespace NinjaGame
                 case gameState.running:
                     runGame.update(gameTime);
                     break;
+                case gameState.died:
+                   
+                    break;
                 case gameState.pause:
                     break;
                 case gameState.end:
@@ -71,6 +74,9 @@ namespace NinjaGame
 
                     break;
                 case gameState.running:
+                    runGame.draw();
+                    break;
+                case gameState.died:
                     runGame.draw();
                     break;
                 case gameState.pause:

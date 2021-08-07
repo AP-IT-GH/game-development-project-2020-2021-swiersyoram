@@ -4,13 +4,13 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/background.png</File>
-    <File>E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/crate.png</File>
-    <File>E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/DoorLocked.png</File>
-    <File>E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/girl-idle.png</File>
-    <File>E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/girl-jump.png</File>
-    <File>E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/girl-running.png</File>
-    <File>E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/Spike.png</File>
+    <File>E:/Repositories/game-development-project-2020-2021-swiersyoram/Ninja-Game/Ninja-Game/Content/background.png</File>
+    <File>E:/Repositories/game-development-project-2020-2021-swiersyoram/Ninja-Game/Ninja-Game/Content/crate.png</File>
+    <File>E:/Repositories/game-development-project-2020-2021-swiersyoram/Ninja-Game/Ninja-Game/Content/DoorLocked.png</File>
+    <File>E:/Repositories/game-development-project-2020-2021-swiersyoram/Ninja-Game/Ninja-Game/Content/girl-idle.png</File>
+    <File>E:/Repositories/game-development-project-2020-2021-swiersyoram/Ninja-Game/Ninja-Game/Content/girl-jump.png</File>
+    <File>E:/Repositories/game-development-project-2020-2021-swiersyoram/Ninja-Game/Ninja-Game/Content/girl-running.png</File>
+    <File>E:/Repositories/game-development-project-2020-2021-swiersyoram/Ninja-Game/Ninja-Game/Content/Spike.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

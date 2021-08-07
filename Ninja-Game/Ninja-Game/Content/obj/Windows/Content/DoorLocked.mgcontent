@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/DoorLocked.png</SourceFile>
-  <SourceTime>2021-08-07T11:39:02.7412118+02:00</SourceTime>
-  <DestFile>E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/bin/Windows/Content/DoorLocked.xnb</DestFile>
-  <DestTime>2021-08-07T11:41:28.4316464+02:00</DestTime>
+  <SourceFile>E:/Repositories/game-development-project-2020-2021-swiersyoram/Ninja-Game/Ninja-Game/Content/DoorLocked.png</SourceFile>
+  <SourceTime>2021-08-07T18:07:18.0316341+02:00</SourceTime>
+  <DestFile>E:/Repositories/game-development-project-2020-2021-swiersyoram/Ninja-Game/Ninja-Game/Content/bin/Windows/Content/DoorLocked.xnb</DestFile>
+  <DestTime>2021-08-07T18:07:23.3613754+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T16:17:54+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

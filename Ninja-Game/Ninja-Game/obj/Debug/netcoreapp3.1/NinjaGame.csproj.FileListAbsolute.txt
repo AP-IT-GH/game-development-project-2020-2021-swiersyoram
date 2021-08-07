@@ -80,3 +80,7 @@ E:\Repositories\game-development-project-2020-2021\Ninja-Game\Ninja-Game\bin\Deb
 E:\Repositories\game-development-project-2020-2021\Ninja-Game\Ninja-Game\bin\Debug\netcoreapp3.1\Content\crate.xnb
 E:\Repositories\game-development-project-2020-2021\Ninja-Game\Ninja-Game\bin\Debug\netcoreapp3.1\Content\DoorLocked.xnb
 E:\Repositories\game-development-project-2020-2021\Ninja-Game\Ninja-Game\bin\Debug\netcoreapp3.1\Content\Spike.xnb
+E:\Repositories\game-development-project-2020-2021-swiersyoram\Ninja-Game\Ninja-Game\bin\Debug\netcoreapp3.1\Content\crate.xnb
+E:\Repositories\game-development-project-2020-2021-swiersyoram\Ninja-Game\Ninja-Game\bin\Debug\netcoreapp3.1\Content\DoorLocked.xnb
+E:\Repositories\game-development-project-2020-2021-swiersyoram\Ninja-Game\Ninja-Game\bin\Debug\netcoreapp3.1\Content\girl-jump.xnb
+E:\Repositories\game-development-project-2020-2021-swiersyoram\Ninja-Game\Ninja-Game\bin\Debug\netcoreapp3.1\Content\Spike.xnb

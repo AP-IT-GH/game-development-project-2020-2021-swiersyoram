@@ -9,6 +9,7 @@ namespace NinjaGame
         start,
         running,
         pause,
+        died,
         end
 
     }
