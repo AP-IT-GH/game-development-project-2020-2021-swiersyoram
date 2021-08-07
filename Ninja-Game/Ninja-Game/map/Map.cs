@@ -11,37 +11,39 @@ namespace NinjaGame.map
     {
 
         private ILevel level1;
+        private ILevel level2;
         private ILevel activelevel;
         public Map(SpriteBatch spritebatch, ContentManager content)
         {
 
-            List<Rectangle> crateslvl1 =  new List<Rectangle>();
-            crateslvl1.Add(new Rectangle(600, 600, 80, 80));
-            crateslvl1.Add(new Rectangle(600 + 80, 600, 80, 80));
-            level1 = new Level(spritebatch, content, crateslvl1);
-            
+            level1 = new Level(spritebatch, content, GameParameters.crateslvl1, GameParameters.spikeslvl1, GameParameters.deurlvl1);
+            level2 = new Level(spritebatch, content, GameParameters.crateslvl2, GameParameters.spikeslvl2,GameParameters.deurlvl2);
             activelevel = level1;
 
         }
         public void load()
         {
-            activelevel.load();
+            level1.load();
+            level2.load();
+
         }
 
-        public void switchlevel(level lvl)
+        public void Activelevel()
         {
-            switch (lvl)
+            switch (GameParameters.activelevel)
             {
                 case level.one:
                     activelevel = level1;
                     break;
                 case level.two:
+                    activelevel = level2;
+
                     break;
                 default:
                     break;
             }
         }
-        public List<Rectangle> layout()
+        public Dictionary<string, List<Rectangle>> layout()
         {
 
             return activelevel.layout();
@@ -49,7 +51,7 @@ namespace NinjaGame.map
 
         public void Draw()
         {
-            level1.Draw();
+            activelevel.Draw();
 
         }
     }

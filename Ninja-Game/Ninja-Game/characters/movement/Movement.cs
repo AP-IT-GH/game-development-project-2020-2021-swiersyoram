@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using NinjaGame.animation;
+using NinjaGame.collision;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -17,9 +18,6 @@ namespace NinjaGame.characters.movement
             get { return direction; }
         }
 
-        private Vector2 positie;    
-        
-
         private Texture2D animationtexture;
         public Texture2D AnimationTexture
         {
@@ -32,6 +30,8 @@ namespace NinjaGame.characters.movement
             get { return animationframe; }
         }
 
+        private Vector2 positie;
+        private Vector2 lastpos;
 
         private Vector2 snelheid;
         private characterState state;
@@ -45,7 +45,6 @@ namespace NinjaGame.characters.movement
         private float gravity = 1f;
         private float jumpstep = 20;
         private int doublejump = 0;
-        private bool overplatform = false;
 
         private ContentManager Content;
         private Texture2D _runningGirl;
@@ -56,20 +55,67 @@ namespace NinjaGame.characters.movement
         private Animation idleAnimation;
         private Animation jumpAnimation;
 
-        public Movement(ContentManager content)
+
+        private Platformdetection platformdetection;
+        private objectdetection objectdetection;
+
+
+        public Movement(ContentManager content, Vector2 startposition)
         {
             state = characterState.idle;
             runningAnimation = new Animation(GameParameters.girlSpriteWidth, GameParameters.girlSpriteHeight, GameParameters.girlWidth, 0.03);
             idleAnimation = new Animation(2180, 375, 218, 0.1);
             jumpAnimation = new Animation(300, 410, 300, 0.03);
             Content = content;
+
+            platformdetection = new Platformdetection();
+            objectdetection = new objectdetection();
+
+            positie = startposition;
+            lastpos = startposition;
+
         }
 
      
-        public Vector2 move(Vector2 Richting, List<Rectangle> layout)
+        public Vector2 move(Vector2 Richting, Dictionary<string, List<Rectangle>> layout)
         {
             richting = Richting;
 
+            movehorizontal();
+
+            movevertical();
+
+            snelheid.Y += gravity;
+            positie += snelheid;
+
+            var platformresponse = platformdetection.collision(positie,lastpos,layout);
+            if (platformresponse.Item1)
+            {
+                resetjump();
+                positie.Y = platformresponse.Item2;
+            }
+
+            positie = objectdetection.collision(positie, layout);
+
+            if (positie.Y > grond)
+            {
+                resetjump();
+                positie.Y = grond;
+            }
+
+            lastpos = positie;
+            return positie;
+        }
+
+
+        private void resetjump()
+        {
+            jump = false;
+            doublejump = 0;
+            snelheid.Y = 0;
+        }
+        private void movehorizontal()
+        {
             switch (richting.X)
             {
                 case 1:
@@ -92,12 +138,15 @@ namespace NinjaGame.characters.movement
                 default:
                     break;
             }
+            
+        }
 
+        private void movevertical()
+        {
 
-
-            if (richting.Y == 1 && jumpkey == false )
+            if (richting.Y == 1 && jumpkey == false)
             {
-                if(doublejump < 2)
+                if (doublejump < 2)
                 {
                     jumpkey = true;
                     snelheid.Y = -jumpstep;
@@ -108,59 +157,23 @@ namespace NinjaGame.characters.movement
             {
                 jumpkey = false;
             }
-            if(positie.Y < grond)
+            if (positie.Y < grond)
             {
                 jump = true;
             }
-
-            snelheid.Y += gravity;
-            positie += snelheid;
-
-            foreach (var crate in layout)
-            {
-                if(positie.X > crate.X && positie.X < crate.X + crate.Width)
-                {
-                    if (positie.Y < crate.Y)
-                    {
-                        overplatform = true;
-                    }
-                        if (positie.Y > crate.Y && overplatform == true)
-                    {
-                        jump = false;
-                        doublejump = 0;
-                        snelheid.Y = 0;
-                        
-                        positie.Y = crate.Y;
-                    }
-
-
-                }
-                
-                
-            }
-
             
-            if (positie.Y > grond)
-            {
-                jump = false;
-                doublejump = 0;
-                snelheid.Y = 0;
-                positie.Y = grond;
-                overplatform = false;
-            }
-            return positie;
         }
 
 
-        private void checkanimation()
+        public void updateAnimation(GameTime gameTime)
         {
-            if (snelheid.X == 0 && richting.X == 0 && jump == false)
+            if(snelheid.X == 0 && richting.X == 0 && jump == false)
             {
                 state = characterState.idle;
                 animationframe = idleAnimation.Frame;
                 animationtexture = _idleGirl;
             }
-            if(snelheid.X != 0 && jump ==false)
+            if (snelheid.X != 0 && jump == false)
             {
                 state = characterState.running;
                 animationframe = runningAnimation.Frame;
@@ -176,11 +189,6 @@ namespace NinjaGame.characters.movement
                 animationtexture = _jumpGirl;
 
             }
-        }
-
-        public void updateAnimation(GameTime gameTime)
-        {
-            checkanimation();
             switch (state)
             {
                 case characterState.idle:

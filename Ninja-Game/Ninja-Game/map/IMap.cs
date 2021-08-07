@@ -7,11 +7,13 @@ namespace NinjaGame.map
 {
     interface IMap
     {
+
         public void load()
         {
 
         }
-        public List<Rectangle> layout();
+        public Dictionary<string, List<Rectangle>> layout();
+        public void Activelevel();
 
         public void Draw()
         {

@@ -42,6 +42,7 @@ namespace NinjaGame.gamestates
 
         public void update(GameTime gameTime)
         {
+            maplayout.Activelevel();
             ninjaGirl.update(gameTime, keyboard.Inputreader(), maplayout.layout());
 
         }

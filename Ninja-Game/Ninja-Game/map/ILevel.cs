@@ -8,7 +8,7 @@ namespace NinjaGame.map
     interface ILevel
     {
         public void load();
-        public List<Rectangle> layout();
+        public Dictionary<string, List<Rectangle>> layout();
         public void Draw();
 
 

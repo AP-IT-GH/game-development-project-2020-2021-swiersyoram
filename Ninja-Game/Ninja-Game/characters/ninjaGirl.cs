@@ -23,9 +23,9 @@ namespace NinjaGame.characters
 
         public NinjaGirl(SpriteBatch spritebatch, ContentManager content)
         {
-            charactermovement = new Movement(content);
+            positie = new Vector2(50, GameParameters.grond);
+            charactermovement = new Movement(content, positie);
             _spriteBatch = spritebatch;
-            positie = new Vector2(0, GameParameters.grond);
         }
 
         public void load()
@@ -35,7 +35,7 @@ namespace NinjaGame.characters
 
        
 
-        public void update(GameTime gameTime, Vector2 richting, List<Rectangle> layout)
+        public void update(GameTime gameTime, Vector2 richting, Dictionary<string, List<Rectangle>> layout)
         {
             positie = charactermovement.move(richting,layout);
             charactermovement.updateAnimation(gameTime);
@@ -45,7 +45,7 @@ namespace NinjaGame.characters
         public void draw()
         {
            
-            _spriteBatch.Draw(charactermovement.AnimationTexture, positie, charactermovement.AnimationFrame, Color.White, 0f, Vector2.Zero, 0.35f, charactermovement.Direction, 0f);
+            _spriteBatch.Draw(charactermovement.AnimationTexture, positie, charactermovement.AnimationFrame, Color.White, 0f, new Vector2(141,370), GameParameters.characterscale, charactermovement.Direction, 0f);
                   
 
         }

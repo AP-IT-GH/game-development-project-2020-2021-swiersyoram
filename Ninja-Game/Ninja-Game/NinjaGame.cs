@@ -32,7 +32,6 @@ namespace NinjaGame
         protected override void Initialize()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-
             BuildGame.build(_graphics, GameParameters.windowWidth, GameParameters.windowHeight);
             runGame = new RunGame(_spriteBatch, this.Content);
             base.Initialize();
