@@ -18,13 +18,16 @@ namespace NinjaGame.characters
 
         private Vector2 positie;
 
+        public bool Dood { get; set; }
+
+
 
 
 
         public NinjaGirl(SpriteBatch spritebatch, ContentManager content)
         {
             positie = new Vector2(50, GameParameters.grond);
-            charactermovement = new Movement(content, positie);
+            charactermovement = new Movement(content, positie,this);
             _spriteBatch = spritebatch;
         }
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Repositories\\game-development-project-2020-2021\\Ninja-Game\\Ninja-Game\\NinjaGame.csproj": {}
+    "E:\\Repositories\\game-development-project-2020-2021-swiersyoram\\Ninja-Game\\Ninja-Game\\NinjaGame.csproj": {}
   },
   "projects": {
-    "E:\\Repositories\\game-development-project-2020-2021\\Ninja-Game\\Ninja-Game\\NinjaGame.csproj": {
+    "E:\\Repositories\\game-development-project-2020-2021-swiersyoram\\Ninja-Game\\Ninja-Game\\NinjaGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Repositories\\game-development-project-2020-2021\\Ninja-Game\\Ninja-Game\\NinjaGame.csproj",
+        "projectUniqueName": "E:\\Repositories\\game-development-project-2020-2021-swiersyoram\\Ninja-Game\\Ninja-Game\\NinjaGame.csproj",
         "projectName": "NinjaGame",
-        "projectPath": "E:\\Repositories\\game-development-project-2020-2021\\Ninja-Game\\Ninja-Game\\NinjaGame.csproj",
+        "projectPath": "E:\\Repositories\\game-development-project-2020-2021-swiersyoram\\Ninja-Game\\Ninja-Game\\NinjaGame.csproj",
         "packagesPath": "C:\\Users\\yoram\\.nuget\\packages\\",
-        "outputPath": "E:\\Repositories\\game-development-project-2020-2021\\Ninja-Game\\Ninja-Game\\obj\\",
+        "outputPath": "E:\\Repositories\\game-development-project-2020-2021-swiersyoram\\Ninja-Game\\Ninja-Game\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yoram\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -67,7 +67,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

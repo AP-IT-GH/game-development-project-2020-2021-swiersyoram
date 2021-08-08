@@ -8,6 +8,8 @@ namespace NinjaGame.characters
 {
     interface IGameCharacter
     {
+
+        public bool Dood { get; set; }
         public void load();
         public void update(GameTime gameTime, Vector2 newspeed, Dictionary<string, List<Rectangle>> layout);
         public void draw();
