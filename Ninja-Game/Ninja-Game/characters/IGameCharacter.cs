@@ -10,6 +10,7 @@ namespace NinjaGame.characters
     {
 
         public bool Dood { get; set; }
+        public Vector2 positie { get; set; }
         public void load();
         public void update(GameTime gameTime, Vector2 newspeed, Dictionary<string, List<Rectangle>> layout);
         public void draw();

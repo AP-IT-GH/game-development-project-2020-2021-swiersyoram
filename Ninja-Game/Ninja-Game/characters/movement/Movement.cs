@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using NinjaGame.animation;
+using NinjaGame.characters.animation;
 using NinjaGame.collision;
 using System;
 using System.Collections.Generic;
@@ -30,16 +31,12 @@ namespace NinjaGame.characters.movement
             get { return animationframe; }
         }
 
-        private Vector2 positie;
         private Vector2 lastpos;
-
         private Vector2 snelheid;
-        private characterState state;
         private Vector2 richting;
 
         private int maxsnelheid = 10;
         private float snelheidstap = 1f;
-        private int grond = GameParameters.grond;
         private bool jumpkey = false;
         private bool jump = false;
         private float gravity = 1f;
@@ -50,37 +47,39 @@ namespace NinjaGame.characters.movement
         private Texture2D _runningGirl;
         private Texture2D _idleGirl;
         private Texture2D _jumpGirl;
+        private Texture2D _diegirl;
+
 
         private Animation runningAnimation;
         private Animation idleAnimation;
         private Animation jumpAnimation;
+        private DieAnimation dieanimation;
 
 
         private Platformdetection platformdetection;
-        private objectdetection objectdetection;
+        private Objectdetection objectdetection;
         private IGameCharacter character;
 
 
-        public Movement(ContentManager content, Vector2 startposition, IGameCharacter Character)
+        public Movement(ContentManager content, IGameCharacter Character)
         {
-            state = characterState.idle;
             runningAnimation = new Animation(GameParameters.girlSpriteWidth, GameParameters.girlSpriteHeight, GameParameters.girlWidth, 0.03);
             idleAnimation = new Animation(2180, 375, 218, 0.1);
             jumpAnimation = new Animation(300, 410, 300, 0.03);
-            Content = content;
+            dieanimation = new DieAnimation(300, 410, 300, 0.03);
+            
 
             platformdetection = new Platformdetection();
-            objectdetection = new objectdetection();
+            objectdetection = new Objectdetection(Character);
 
+            Content = content;
             character = Character;
-
-            positie = startposition;
-            lastpos = startposition;
+            lastpos = Character.positie;
 
         }
 
      
-        public Vector2 move(Vector2 Richting, Dictionary<string, List<Rectangle>> layout)
+        public void  move(Vector2 Richting, Dictionary<string, List<Rectangle>> layout)
         {
             richting = Richting;
 
@@ -89,25 +88,25 @@ namespace NinjaGame.characters.movement
             movevertical();
 
             snelheid.Y += gravity;
-            positie += snelheid;
+            character.positie += snelheid;
 
-            var platformresponse = platformdetection.collision(positie,lastpos,layout);
+            var platformresponse = platformdetection.collision(character.positie, lastpos,layout);
             if (platformresponse.Item1)
             {
                 resetjump();
-                positie.Y = platformresponse.Item2;
+                character.positie = new Vector2( character.positie.X,platformresponse.Item2);
             }
 
-            positie = objectdetection.collision(positie, layout);
+            objectdetection.collision( layout);
 
-            if (positie.Y > grond)
+            if (character.positie.Y > GameParameters.grond)
             {
                 resetjump();
-                positie.Y = grond;
+                character.positie = new Vector2(character.positie.X,GameParameters.grond);
             }
 
-            lastpos = positie;
-            return positie;
+            lastpos = character.positie ;
+
         }
 
 
@@ -160,7 +159,7 @@ namespace NinjaGame.characters.movement
             {
                 jumpkey = false;
             }
-            if (positie.Y < grond)
+            if (character.positie.Y < GameParameters.grond)
             {
                 jump = true;
             }
@@ -203,6 +202,9 @@ namespace NinjaGame.characters.movement
             _runningGirl = Content.Load<Texture2D>("girl-running");
             _idleGirl = Content.Load<Texture2D>("girl-idle");
             _jumpGirl = Content.Load<Texture2D>("girl-jump");
+            _diegirl = Content.Load<Texture2D>("girl-die");
+
+
 
             animationtexture = _idleGirl;
             animationframe = idleAnimation.Frame;

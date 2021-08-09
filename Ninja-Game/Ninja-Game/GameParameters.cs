@@ -16,7 +16,7 @@ namespace NinjaGame
         public static gameState gamestate = gameState.running;
 
         //level
-        public static level activelevel = level.one;
+        public static level activelevel = level.two;
       
 
         //characters
@@ -61,8 +61,8 @@ namespace NinjaGame
 
         public static List<Rectangle> crateslvl2 = new List<Rectangle>()
         {
-            new Rectangle(1000, 800, 80, 80),
-            new Rectangle(1080, 800, 80, 80),
+            new Rectangle(900, 800, 80, 80),
+            new Rectangle(980, 800, 80, 80),
             new Rectangle(1700, 600, 80, 80),
             new Rectangle(1450, 250, 80, 80),
             new Rectangle(1530, 250, 80, 80),
@@ -81,6 +81,8 @@ namespace NinjaGame
             new Rectangle(350, GameParameters.grond - 80, 150, 80),
             new Rectangle(500, GameParameters.grond - 80, 150, 80),
             new Rectangle(650, GameParameters.grond - 80, 150, 80),
+
+            new Rectangle(900, GameParameters.grond - 80, 150, 80),
 
 
 

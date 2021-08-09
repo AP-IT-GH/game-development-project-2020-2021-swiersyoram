@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/girl-running.png</SourceFile>
-  <SourceTime>2021-08-04T14:35:58.1922941+02:00</SourceTime>
-  <DestFile>E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/bin/Windows/girl-running.xnb</DestFile>
-  <DestTime>2021-08-04T14:37:16.840762+02:00</DestTime>
+  <SourceFile>E:/Repositories/game-development-project-2020-2021-swiersyoram/Ninja-Game/Ninja-Game/Content/girl-running.png</SourceFile>
+  <SourceTime>2021-08-05T19:22:25.1780265+02:00</SourceTime>
+  <DestFile>E:/Repositories/game-development-project-2020-2021-swiersyoram/Ninja-Game/Ninja-Game/Content/bin/Windows/girl-running.xnb</DestFile>
+  <DestTime>2021-08-09T15:19:49.5677391+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T16:17:54+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

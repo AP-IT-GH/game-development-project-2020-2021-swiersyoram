@@ -16,7 +16,7 @@ namespace NinjaGame.characters
 
         private SpriteBatch _spriteBatch;
 
-        private Vector2 positie;
+        public Vector2 positie { get; set; }
 
         public bool Dood { get; set; }
 
@@ -27,7 +27,7 @@ namespace NinjaGame.characters
         public NinjaGirl(SpriteBatch spritebatch, ContentManager content)
         {
             positie = new Vector2(50, GameParameters.grond);
-            charactermovement = new Movement(content, positie,this);
+            charactermovement = new Movement(content,this);
             _spriteBatch = spritebatch;
         }
 
@@ -40,7 +40,7 @@ namespace NinjaGame.characters
 
         public void update(GameTime gameTime, Vector2 richting, Dictionary<string, List<Rectangle>> layout)
         {
-            positie = charactermovement.move(richting,layout);
+            charactermovement.move(richting,layout);
             charactermovement.updateAnimation(gameTime);
             
         }
