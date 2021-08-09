@@ -1,4 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Graphics;
 using NinjaGame.map;
 using System;
 using System.Collections.Generic;
@@ -8,19 +10,18 @@ namespace NinjaGame
 {
     class GameParameters
     {
+
         //window
         public static int windowHeight = 1000;
         public static int windowWidth = 1800;
 
         //game states
-        public static gameState gamestate = gameState.running;
+        public static gameState gamestate = gameState.start;
 
         //level
-        public static level activelevel = level.two;
+        public static level activelevel = level.one;
       
 
-        //characters
-        public static float characterscale = 0.35f;
 
         //ninjaGirl
 
@@ -28,7 +29,6 @@ namespace NinjaGame
         public static int girlSpriteHeight = 390;
         public static int girlWidth = 282;
         public static int girlHeight = 390;
-        public static float girlScaledHeight = girlHeight * characterscale;
 
 
         //map
@@ -47,6 +47,10 @@ namespace NinjaGame
             new Rectangle(1560, 200, 80, 80),
             new Rectangle(1640, 200, 80, 80),
             new Rectangle(1720, 200, 80, 80),
+
+            new Rectangle(700, 600, 80, 80),
+            new Rectangle(1100, 650, 80, 80),
+            new Rectangle(1600, 700, 80, 80),
         };
         public static List<Rectangle> spikeslvl1 = new List<Rectangle>() {
         new Rectangle(900, GameParameters.grond - 80, 150, 80),

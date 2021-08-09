@@ -14,17 +14,15 @@ namespace NinjaGame.gamestates
     class RunGame : IGameState
     {
 
-        private SpriteBatch _spriteBatch;
-      
-
         private IGameCharacter ninjaGirl;
-
-        private IInputReader keyboard;
+        private IKeyboardReader keyboard;
         private IMap maplayout;
+
+        private double lasttime;
+        private double delay = 1;
 
 
         public RunGame(SpriteBatch spritebatch, ContentManager content){
-            _spriteBatch = spritebatch;
             ninjaGirl = new NinjaGirl(spritebatch, content);
             keyboard = new KeyboardReader();
             maplayout = new Map(spritebatch, content);
@@ -42,18 +40,34 @@ namespace NinjaGame.gamestates
 
         public void update(GameTime gameTime)
         {
-            maplayout.Activelevel();
-            ninjaGirl.update(gameTime, keyboard.Inputreader(), maplayout.layout());
+
+                maplayout.Activelevel();
+                ninjaGirl.update(gameTime, keyboard.Inputreader(), maplayout.layout());
+
+                if(ninjaGirl.Dood == false)
+                {
+                lasttime = gameTime.TotalGameTime.TotalSeconds;
+                    
+                }
+
+            if (gameTime.TotalGameTime.TotalSeconds > lasttime + delay && ninjaGirl.Dood == true)
+                {
+                    GameParameters.gamestate = gameState.died;
+                }
+                
+            
+                
+            
 
         }
-
+        
         public void draw()
         {
-            _spriteBatch.Begin();
+            
             maplayout.Draw();
             ninjaGirl.draw();
-            _spriteBatch.End();
         }
+
 
     }
 }

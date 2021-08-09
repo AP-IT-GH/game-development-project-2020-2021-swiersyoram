@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using NinjaGame.animation;
 using NinjaGame.controller;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ namespace NinjaGame.characters
 
         public bool Dood { get; set; }
         public Vector2 positie { get; set; }
+        public Animation Activeanimation { get; set; }
         public void load();
         public void update(GameTime gameTime, Vector2 newspeed, Dictionary<string, List<Rectangle>> layout);
         public void draw();

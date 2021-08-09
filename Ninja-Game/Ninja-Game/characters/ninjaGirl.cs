@@ -20,6 +20,8 @@ namespace NinjaGame.characters
 
         public bool Dood { get; set; }
 
+        public Animation Activeanimation { get; set; }
+
 
 
 
@@ -40,17 +42,18 @@ namespace NinjaGame.characters
 
         public void update(GameTime gameTime, Vector2 richting, Dictionary<string, List<Rectangle>> layout)
         {
-            charactermovement.move(richting,layout);
+            if(this.Dood == false)
+            {
+                charactermovement.move(richting, layout);
+
+            }
             charactermovement.updateAnimation(gameTime);
             
         }
 
         public void draw()
         {
-           
-            _spriteBatch.Draw(charactermovement.AnimationTexture, positie, charactermovement.AnimationFrame, Color.White, 0f, new Vector2(141,370), GameParameters.characterscale, charactermovement.Direction, 0f);
-                  
-
+           _spriteBatch.Draw(Activeanimation.Texture, positie, Activeanimation.Frame, Color.White, 0f, Activeanimation.Origin, Activeanimation.Scale, charactermovement.Direction, 0f);
         }
     }
 }

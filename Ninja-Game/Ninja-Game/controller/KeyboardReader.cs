@@ -9,7 +9,7 @@ using System.Text;
 
 namespace NinjaGame.controller
 {
-    class KeyboardReader:IInputReader
+    class KeyboardReader:IKeyboardReader
     {
         private Vector2 richting;
         public KeyboardReader()

@@ -86,3 +86,15 @@ E:\Repositories\game-development-project-2020-2021-swiersyoram\Ninja-Game\Ninja-
 E:\Repositories\game-development-project-2020-2021-swiersyoram\Ninja-Game\Ninja-Game\bin\Debug\netcoreapp3.1\Content\Spike.xnb
 E:\Repositories\game-development-project-2020-2021-swiersyoram\Ninja-Game\Ninja-Game\bin\Debug\netcoreapp3.1\Content\girl-die.xnb
 E:\Repositories\game-development-project-2020-2021-swiersyoram\Ninja-Game\Ninja-Game\bin\Debug\netcoreapp3.1\Content\die-girl.xnb
+E:\Repositories\game-development-project-2020-2021\Ninja-Game\Ninja-Game\bin\Debug\netcoreapp3.1\Content\die-girl.xnb
+E:\Repositories\game-development-project-2020-2021\Ninja-Game\Ninja-Game\bin\Debug\netcoreapp3.1\Content\girl-die.xnb
+E:\Repositories\game-development-project-2020-2021\Ninja-Game\Ninja-Game\bin\Debug\netcoreapp3.1\Content\test.xnb
+E:\Repositories\game-development-project-2020-2021\Ninja-Game\Ninja-Game\bin\Debug\netcoreapp3.1\Content\test2.xnb
+E:\Repositories\game-development-project-2020-2021\Ninja-Game\Ninja-Game\bin\Debug\netcoreapp3.1\Content\tes3.xnb
+E:\Repositories\game-development-project-2020-2021\Ninja-Game\Ninja-Game\bin\Debug\netcoreapp3.1\Content\kanker.xnb
+E:\Repositories\game-development-project-2020-2021\Ninja-Game\Ninja-Game\bin\Debug\netcoreapp3.1\Content\background2.xnb
+E:\Repositories\game-development-project-2020-2021\Ninja-Game\Ninja-Game\bin\Debug\netcoreapp3.1\Content\restart.xnb
+E:\Repositories\game-development-project-2020-2021\Ninja-Game\Ninja-Game\bin\Debug\netcoreapp3.1\Content\end.xnb
+E:\Repositories\game-development-project-2020-2021\Ninja-Game\Ninja-Game\bin\Debug\netcoreapp3.1\Content\begin.xnb
+E:\Repositories\game-development-project-2020-2021\Ninja-Game\Ninja-Game\bin\Debug\netcoreapp3.1\Content\beginbutton.xnb
+E:\Repositories\game-development-project-2020-2021\Ninja-Game\Ninja-Game\bin\Debug\netcoreapp3.1\Content\endbutton.xnb

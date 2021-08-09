@@ -19,17 +19,7 @@ namespace NinjaGame.characters.movement
             get { return direction; }
         }
 
-        private Texture2D animationtexture;
-        public Texture2D AnimationTexture
-        {
-            get { return animationtexture; }
-        }
-
-        private Rectangle animationframe;
-        public Rectangle AnimationFrame
-        {
-            get { return animationframe; }
-        }
+       
 
         private Vector2 lastpos;
         private Vector2 snelheid;
@@ -43,17 +33,13 @@ namespace NinjaGame.characters.movement
         private float jumpstep = 20;
         private int doublejump = 0;
 
-        private ContentManager Content;
-        private Texture2D _runningGirl;
-        private Texture2D _idleGirl;
-        private Texture2D _jumpGirl;
-        private Texture2D _diegirl;
+     
 
 
         private Animation runningAnimation;
         private Animation idleAnimation;
         private Animation jumpAnimation;
-        private DieAnimation dieanimation;
+        private Animation dieAnimation;
 
 
         private Platformdetection platformdetection;
@@ -63,16 +49,15 @@ namespace NinjaGame.characters.movement
 
         public Movement(ContentManager content, IGameCharacter Character)
         {
-            runningAnimation = new Animation(GameParameters.girlSpriteWidth, GameParameters.girlSpriteHeight, GameParameters.girlWidth, 0.03);
-            idleAnimation = new Animation(2180, 375, 218, 0.1);
-            jumpAnimation = new Animation(300, 410, 300, 0.03);
-            dieanimation = new DieAnimation(300, 410, 300, 0.03);
-            
+            idleAnimation = new Animation(content.Load<Texture2D>("girl-idle"), 0.1,10, 0.3f, true);
+            runningAnimation = new Animation(content.Load<Texture2D>("girl-running"),0.05,10,0.3f, true);
+            jumpAnimation = new Animation(content.Load<Texture2D>("girl-jump"),0.1,1,0.3f, true);
+            dieAnimation = new Animation(content.Load<Texture2D>("girl-die"), 0.1, 10, 0.6f, false);
+
 
             platformdetection = new Platformdetection();
             objectdetection = new Objectdetection(Character);
 
-            Content = content;
             character = Character;
             lastpos = Character.positie;
 
@@ -172,43 +157,33 @@ namespace NinjaGame.characters.movement
             if(snelheid.X == 0 && richting.X == 0 && jump == false)
             {
                     idleAnimation.update(gameTime);
+                character.Activeanimation = idleAnimation;
 
-                animationframe = idleAnimation.Frame;
-                animationtexture = _idleGirl;
             }
             if (snelheid.X != 0 && jump == false)
             {
                 runningAnimation.update(gameTime);
+                character.Activeanimation = runningAnimation;
 
-                animationframe = runningAnimation.Frame;
-
-                animationtexture = _runningGirl;
 
             }
             if (snelheid.Y != 0)
             {
-                    jumpAnimation.update(gameTime);
-
-                animationframe = jumpAnimation.Frame;
-
-                animationtexture = _jumpGirl;
-
+                jumpAnimation.update(gameTime);
+                character.Activeanimation = jumpAnimation;
             }
-            
+            if (character.Dood)
+            {
+                dieAnimation.update(gameTime);
+                character.Activeanimation = dieAnimation;
+            }
+
+
         }
 
         public void loadAnimations()
         {
-            _runningGirl = Content.Load<Texture2D>("girl-running");
-            _idleGirl = Content.Load<Texture2D>("girl-idle");
-            _jumpGirl = Content.Load<Texture2D>("girl-jump");
-            _diegirl = Content.Load<Texture2D>("girl-die");
-
-
-
-            animationtexture = _idleGirl;
-            animationframe = idleAnimation.Frame;
-
+            character.Activeanimation = idleAnimation;
         }
 
     }

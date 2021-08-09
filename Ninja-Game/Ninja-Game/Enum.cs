@@ -10,6 +10,7 @@ namespace NinjaGame
         running,
         pause,
         died,
+        restart,
         end
 
     }
