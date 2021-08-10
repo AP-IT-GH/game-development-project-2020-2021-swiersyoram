@@ -16,11 +16,14 @@ namespace NinjaGame.gamestates.startmenu
         {
             Texture = texture;
             Positie = positie;
+
         }
-        
+        private float scale = 1f;
+        public float Scale { get { return scale; } }
+
         public bool update(MouseState mouse)
         {
-            if(mouse.X > Positie.X && mouse.X < Positie.X + Texture.Width && mouse.Y > Positie.Y && mouse.Y < Positie.Y + Texture.Height)
+            if(mouse.X > Positie.X-Texture.Width/2 && mouse.X < Positie.X+Texture.Width/2 && mouse.Y > Positie.Y-Texture.Height/2 && mouse.Y < Positie.Y + Texture.Height / 2)
             {
                 if(mouse.LeftButton == ButtonState.Pressed)
                 {
@@ -28,11 +31,13 @@ namespace NinjaGame.gamestates.startmenu
                 }
                 else
                 {
+                    scale = 1.1f;
                     return false;
                 }
             }
             else
             {
+                scale = 1f;
                 return false;
             }
 

@@ -7,17 +7,13 @@ namespace NinjaGame.map
 {
     interface IMap
     {
+        public ILevel ActiveLevel { get; set; }
 
-        public void load()
-        {
 
-        }
-        public Dictionary<string, List<Rectangle>> layout();
-        public void Activelevel();
-
-        public void Draw()
-        {
-
-        }
+        public void Load();
+        
+        public void Update(GameTime gameTime);
+        public void Draw();
+        
     }
 }

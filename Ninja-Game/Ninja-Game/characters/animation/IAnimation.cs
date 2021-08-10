@@ -7,6 +7,6 @@ namespace NinjaGame.characters.animation
 {
     interface IAnimation
     {
-        public void update(GameTime gameTime);
+       public void update(GameTime gameTime);
     }
 }

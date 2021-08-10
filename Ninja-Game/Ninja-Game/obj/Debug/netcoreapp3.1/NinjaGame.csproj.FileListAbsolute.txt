@@ -98,3 +98,5 @@ E:\Repositories\game-development-project-2020-2021\Ninja-Game\Ninja-Game\bin\Deb
 E:\Repositories\game-development-project-2020-2021\Ninja-Game\Ninja-Game\bin\Debug\netcoreapp3.1\Content\begin.xnb
 E:\Repositories\game-development-project-2020-2021\Ninja-Game\Ninja-Game\bin\Debug\netcoreapp3.1\Content\beginbutton.xnb
 E:\Repositories\game-development-project-2020-2021\Ninja-Game\Ninja-Game\bin\Debug\netcoreapp3.1\Content\endbutton.xnb
+E:\Repositories\game-development-project-2020-2021\Ninja-Game\Ninja-Game\bin\Debug\netcoreapp3.1\Content\coins.xnb
+E:\Repositories\game-development-project-2020-2021\Ninja-Game\Ninja-Game\bin\Debug\netcoreapp3.1\Content\DoorUnlocked.xnb

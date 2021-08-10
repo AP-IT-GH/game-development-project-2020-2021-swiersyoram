@@ -7,8 +7,10 @@
     <File>E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/background.png</File>
     <File>E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/begin.png</File>
     <File>E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/beginbutton.png</File>
+    <File>E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/coins.png</File>
     <File>E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/crate.png</File>
     <File>E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/DoorLocked.png</File>
+    <File>E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/DoorUnlocked.png</File>
     <File>E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/end.png</File>
     <File>E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/endbutton.png</File>
     <File>E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/girl-die.png</File>
@@ -19,6 +21,8 @@
     <File>E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/Spike.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

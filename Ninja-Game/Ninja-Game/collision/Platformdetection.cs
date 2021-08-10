@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using NinjaGame.map;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,12 +8,18 @@ namespace NinjaGame.collision
 {
     class Platformdetection
     {
+        private IMap layout;
+        public Platformdetection(IMap Layout)
+        {
+            layout = Layout;
 
-        public Tuple<bool, int> collision(Vector2 positie,  Vector2 lastpos,Dictionary<string, List<Rectangle>> layout)
+        }
+
+        public Tuple<bool, int> collision(Vector2 positie,  Vector2 lastpos)
         {
             
             
-                foreach (var crate in layout["crates"])
+                foreach (var crate in layout.ActiveLevel.Crates)
                 {
                     if (positie.X > crate.X && positie.X < crate.X + crate.Width + 10)
                     {

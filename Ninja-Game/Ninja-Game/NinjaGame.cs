@@ -20,9 +20,6 @@ namespace NinjaGame
         private IGameState characterDied;
         private IGameState endGame;
 
-        
-
-
         public NinjaGame()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -109,9 +106,7 @@ namespace NinjaGame
                 
             }
 
-
             _spriteBatch.End();
-
             base.Draw(gameTime);
         }
     }

@@ -23,16 +23,14 @@ namespace NinjaGame.gamestates
 
 
         public RunGame(SpriteBatch spritebatch, ContentManager content){
-            ninjaGirl = new NinjaGirl(spritebatch, content);
-            keyboard = new KeyboardReader();
             maplayout = new Map(spritebatch, content);
-            
-            
+            ninjaGirl = new NinjaGirl(spritebatch, content, maplayout);
+            keyboard = new KeyboardReader();
         }
        
         public void load()
         {
-            maplayout.load();
+            maplayout.Load();
             ninjaGirl.load();
         }
 
@@ -41,29 +39,22 @@ namespace NinjaGame.gamestates
         public void update(GameTime gameTime)
         {
 
-                maplayout.Activelevel();
-                ninjaGirl.update(gameTime, keyboard.Inputreader(), maplayout.layout());
+            maplayout.Update(gameTime);
+            ninjaGirl.update(gameTime, keyboard.Inputreader());
 
-                if(ninjaGirl.Dood == false)
-                {
-                lasttime = gameTime.TotalGameTime.TotalSeconds;
-                    
-                }
+            if(ninjaGirl.Dood == false)
+            {
+                lasttime = gameTime.TotalGameTime.TotalSeconds;    
+            }
 
             if (gameTime.TotalGameTime.TotalSeconds > lasttime + delay && ninjaGirl.Dood == true)
-                {
-                    GameParameters.gamestate = gameState.died;
-                }
-                
-            
-                
-            
-
+            {
+                GameParameters.gamestate = gameState.died;
+            }
         }
         
         public void draw()
         {
-            
             maplayout.Draw();
             ninjaGirl.draw();
         }

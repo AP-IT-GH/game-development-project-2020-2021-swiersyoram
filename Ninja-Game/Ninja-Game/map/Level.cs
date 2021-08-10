@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using NinjaGame.animation;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,26 +15,38 @@ namespace NinjaGame.map
 
         private Texture2D _gameBackground;
         private Texture2D _crate;
-        private List<Rectangle> crates;
 
         private Texture2D _deur;
-        private Rectangle deur;
 
         private Texture2D _spike;
-        private List<Rectangle> spikes;
+
+        private Animation coinsanimation;
+
+
+        public List<Rectangle> Crates { get; set; }
+
+        public List<Rectangle> Spikes { get; set; }
+        public List<Vector2> Coins { get; set; }
+        public List<Rectangle> Rotatedspikes { get; set; }
+
+        public Rectangle Deur { get; set; }
 
 
 
-        public Level(SpriteBatch spritebatch, ContentManager content, List<Rectangle> Crates, List<Rectangle> Spikes,Rectangle Deur)
+        public Level(SpriteBatch spritebatch, ContentManager content, List<Rectangle> crates, List<Rectangle> spikes, List<Rectangle> rotatedspikes, List<Vector2> coins,Rectangle deur)
         {
             _spriteBatch = spritebatch;
             Content = content;
-            crates = Crates;
-            spikes = Spikes;
-            deur = Deur;
+            Crates = crates;
+            Spikes = spikes;
+            Deur = deur;
+            Rotatedspikes = rotatedspikes;
+            Coins = new List<Vector2>(coins);
+            coinsanimation = new Animation(content.Load<Texture2D>("coins"),0.1f,10,0.2f,true);
+
         }
 
-        public void load()
+        public void Load()
         {
             _gameBackground = Content.Load<Texture2D>("background");
             _crate = Content.Load<Texture2D>("crate");
@@ -42,31 +55,41 @@ namespace NinjaGame.map
 
         }
 
-        public Dictionary<string,List<Rectangle>> layout()
+       
+        public void Update(GameTime gameTime)
         {
-            var layout = new Dictionary<string, List<Rectangle>>()
+            coinsanimation.update(gameTime);
+            if(this.Coins.Count == 0)
             {
-                {"crates",crates },
-                {"door", new List<Rectangle>(){deur} },
-                {"spikes", spikes }
-            };
+                _deur = Content.Load<Texture2D>("DoorUnlocked");
 
-            return layout;
+
+            }
         }
 
         public void Draw()
         {
             _spriteBatch.Draw(_gameBackground, new Rectangle(0, 0, GameParameters.windowWidth, GameParameters.windowHeight), Color.White);
-            _spriteBatch.Draw(_deur, deur,Color.White);
+            _spriteBatch.Draw(_deur, Deur,Color.White);
 
-            foreach (var crate in crates)
+            foreach (var crate in Crates)
             {
                 _spriteBatch.Draw(_crate, crate, Color.White);
 
             }
-            foreach (var spike in spikes)
+            foreach (var spike in Spikes)
             {
                 _spriteBatch.Draw(_spike, spike, Color.White);
+
+            }
+            foreach (var spike in Rotatedspikes)
+            {
+                _spriteBatch.Draw(_spike, spike, new Rectangle(0,0,_spike.Width, _spike.Height), Color.White,0f, Vector2.Zero, SpriteEffects.FlipVertically, 0f);
+               
+            }
+            foreach (var coin in Coins)
+            {
+                _spriteBatch.Draw(coinsanimation.Texture, coin, coinsanimation.Frame, Color.White, 0f, Vector2.Zero, coinsanimation.Scale,SpriteEffects.FlipVertically, 0f);
 
             }
 

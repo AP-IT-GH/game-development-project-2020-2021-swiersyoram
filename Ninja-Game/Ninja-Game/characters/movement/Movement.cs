@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using NinjaGame.animation;
 using NinjaGame.characters.animation;
 using NinjaGame.collision;
+using NinjaGame.map;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -47,7 +48,7 @@ namespace NinjaGame.characters.movement
         private IGameCharacter character;
 
 
-        public Movement(ContentManager content, IGameCharacter Character)
+        public Movement(ContentManager content, IGameCharacter Character,IMap layout)
         {
             idleAnimation = new Animation(content.Load<Texture2D>("girl-idle"), 0.1,10, 0.3f, true);
             runningAnimation = new Animation(content.Load<Texture2D>("girl-running"),0.05,10,0.3f, true);
@@ -55,8 +56,8 @@ namespace NinjaGame.characters.movement
             dieAnimation = new Animation(content.Load<Texture2D>("girl-die"), 0.1, 10, 0.6f, false);
 
 
-            platformdetection = new Platformdetection();
-            objectdetection = new Objectdetection(Character);
+            platformdetection = new Platformdetection(layout);
+            objectdetection = new Objectdetection(Character, layout);
 
             character = Character;
             lastpos = Character.positie;
@@ -64,7 +65,7 @@ namespace NinjaGame.characters.movement
         }
 
      
-        public void  move(Vector2 Richting, Dictionary<string, List<Rectangle>> layout)
+        public void  move(Vector2 Richting)
         {
             richting = Richting;
 
@@ -75,14 +76,14 @@ namespace NinjaGame.characters.movement
             snelheid.Y += gravity;
             character.positie += snelheid;
 
-            var platformresponse = platformdetection.collision(character.positie, lastpos,layout);
+            var platformresponse = platformdetection.collision(character.positie, lastpos);
             if (platformresponse.Item1)
             {
                 resetjump();
                 character.positie = new Vector2( character.positie.X,platformresponse.Item2);
             }
 
-            objectdetection.collision( layout);
+            objectdetection.collision();
 
             if (character.positie.Y > GameParameters.grond)
             {

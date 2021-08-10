@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using NinjaGame.animation;
 using NinjaGame.controller;
+using NinjaGame.map;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,7 +15,7 @@ namespace NinjaGame.characters
         public Vector2 positie { get; set; }
         public Animation Activeanimation { get; set; }
         public void load();
-        public void update(GameTime gameTime, Vector2 newspeed, Dictionary<string, List<Rectangle>> layout);
+        public void update(GameTime gameTime, Vector2 newspeed);
         public void draw();
 
     }

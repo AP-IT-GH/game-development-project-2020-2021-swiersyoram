@@ -1,4 +1,2 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/begin.png","E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/bin/Windows/begin.xnb","TextureProcessor","Texture2DContent",761133,7211289,0,2977047
-"E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/beginbutton.png","E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/bin/Windows/beginbutton.xnb","TextureProcessor","Texture2DContent",2133,142293,0,0047281
-"E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/endbutton.png","E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/bin/Windows/endbutton.xnb","TextureProcessor","Texture2DContent",1712,142697,0,0048006
+"E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/DoorUnlocked.png","E:/Repositories/game-development-project-2020-2021/Ninja-Game/Ninja-Game/Content/bin/Windows/DoorUnlocked.xnb","TextureProcessor","Texture2DContent",15224,521621,0,1286996

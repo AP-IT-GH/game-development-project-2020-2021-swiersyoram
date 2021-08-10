@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using NinjaGame.animation;
 using NinjaGame.characters.movement;
+using NinjaGame.map;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -26,10 +27,10 @@ namespace NinjaGame.characters
 
 
 
-        public NinjaGirl(SpriteBatch spritebatch, ContentManager content)
+        public NinjaGirl(SpriteBatch spritebatch, ContentManager content,IMap layout)
         {
             positie = new Vector2(50, GameParameters.grond);
-            charactermovement = new Movement(content,this);
+            charactermovement = new Movement(content,this, layout);
             _spriteBatch = spritebatch;
         }
 
@@ -40,11 +41,11 @@ namespace NinjaGame.characters
 
        
 
-        public void update(GameTime gameTime, Vector2 richting, Dictionary<string, List<Rectangle>> layout)
+        public void update(GameTime gameTime, Vector2 richting)
         {
             if(this.Dood == false)
             {
-                charactermovement.move(richting, layout);
+                charactermovement.move(richting );
 
             }
             charactermovement.updateAnimation(gameTime);

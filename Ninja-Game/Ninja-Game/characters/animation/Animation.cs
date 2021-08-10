@@ -55,11 +55,7 @@ namespace NinjaGame.animation
                     }
                 }
                 PreviousTime = CurrentTime;
-
             }
-
-            
-
         }
     }
 }

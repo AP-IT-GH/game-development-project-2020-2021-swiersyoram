@@ -57,7 +57,22 @@ namespace NinjaGame
         new Rectangle(1050, GameParameters.grond - 80, 150, 80),
         new Rectangle(1200, GameParameters.grond - 80, 150, 80),
         new Rectangle(1350, GameParameters.grond - 80, 150, 80),
-        new Rectangle(1500, GameParameters.grond - 80, 150, 80)
+        new Rectangle(1500, GameParameters.grond - 80, 150, 80),
+
+        };
+        public static List<Rectangle> rotatedspikeslvl1 = new List<Rectangle>() {
+
+        new Rectangle(700,230, 150, 80),
+        new Rectangle(1560,280, 150, 80)
+
+        };
+
+        public static List<Vector2> coinslvl1 = new List<Vector2>()
+        {
+            new Vector2(20, 140),
+            new Vector2(1700, grond-60),
+            new Vector2(720, 90),
+            new Vector2(1120, 590)
         };
         public static Rectangle deurlvl1 = new Rectangle(1700, 50, 80, 150);
 
@@ -65,8 +80,9 @@ namespace NinjaGame
 
         public static List<Rectangle> crateslvl2 = new List<Rectangle>()
         {
-            new Rectangle(900, 800, 80, 80),
-            new Rectangle(980, 800, 80, 80),
+            new Rectangle(600, 600, 80, 80),
+            new Rectangle(1000, 800, 80, 80),
+            new Rectangle(1080, 800, 80, 80),
             new Rectangle(1700, 600, 80, 80),
             new Rectangle(1450, 250, 80, 80),
             new Rectangle(1530, 250, 80, 80),
@@ -76,6 +92,9 @@ namespace NinjaGame
             new Rectangle(80, 350, 80, 80),
             new Rectangle(160, 350, 80, 80),
             new Rectangle(240, 350, 80, 80),
+            new Rectangle(320, 350, 80, 80),
+            new Rectangle(400, 350, 80, 80)
+
         };
        
 
@@ -85,17 +104,26 @@ namespace NinjaGame
             new Rectangle(350, GameParameters.grond - 80, 150, 80),
             new Rectangle(500, GameParameters.grond - 80, 150, 80),
             new Rectangle(650, GameParameters.grond - 80, 150, 80),
-
             new Rectangle(900, GameParameters.grond - 80, 150, 80),
-
-
-
+            new Rectangle(1500, GameParameters.grond - 80, 150, 80),
+            new Rectangle(320, 270, 150, 80),
           };
 
+        public static List<Rectangle> rotatedspikeslvl2 = new List<Rectangle>()
+          {
+            new Rectangle(800, 280, 150, 80),
+            new Rectangle(1450, 330, 150, 80),
+          };
+
+        public static List<Vector2> coinslvl2 = new List<Vector2>()
+        {
+            new Vector2(820, grond-60),
+            new Vector2(1700, grond-60),
+            new Vector2(620, 540),
+            new Vector2(1470, 190),
+        };
 
         public static Rectangle deurlvl2 = new Rectangle(50, 200, 80, 150);
-
-
 
     }
 }

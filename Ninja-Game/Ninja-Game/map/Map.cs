@@ -12,47 +12,48 @@ namespace NinjaGame.map
 
         private ILevel level1;
         private ILevel level2;
-        private ILevel activelevel;
+        public ILevel ActiveLevel { get; set; }
         public Map(SpriteBatch spritebatch, ContentManager content)
         {
 
-            level1 = new Level(spritebatch, content, GameParameters.crateslvl1, GameParameters.spikeslvl1, GameParameters.deurlvl1);
-            level2 = new Level(spritebatch, content, GameParameters.crateslvl2, GameParameters.spikeslvl2,GameParameters.deurlvl2);
-            activelevel = level1;
+            level1 = new Level(spritebatch, content, GameParameters.crateslvl1, GameParameters.spikeslvl1, GameParameters.rotatedspikeslvl1, GameParameters.coinslvl1, GameParameters.deurlvl1);
+            level2 = new Level(spritebatch, content, GameParameters.crateslvl2, GameParameters.spikeslvl2, GameParameters.rotatedspikeslvl2, GameParameters.coinslvl2, GameParameters.deurlvl2);
+            ActiveLevel = level1;
 
         }
-        public void load()
+        public void Load()
         {
-            level1.load();
-            level2.load();
-
+            level1.Load();
+            level2.Load();
+        }
+        public void Update(GameTime gameTime)
+        {
+            Activelevel();
+            ActiveLevel.Update(gameTime);
         }
 
-        public void Activelevel()
+
+        private void Activelevel()
         {
             switch (GameParameters.activelevel)
             {
                 case level.one:
-                    activelevel = level1;
+                    ActiveLevel = level1;
                     break;
                 case level.two:
-                    activelevel = level2;
+                    ActiveLevel = level2;
 
                     break;
                 default:
                     break;
             }
         }
-        public Dictionary<string, List<Rectangle>> layout()
-        {
-
-            return activelevel.layout();
-        }
+       
 
         public void Draw()
         {
-            activelevel.Draw();
-
+            ActiveLevel.Draw();
         }
+
     }
 }
