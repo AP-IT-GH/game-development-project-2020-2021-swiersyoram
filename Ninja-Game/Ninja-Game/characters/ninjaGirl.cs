@@ -39,8 +39,6 @@ namespace NinjaGame.characters
             charactermovement.loadAnimations();
         }
 
-       
-
         public void update(GameTime gameTime, Vector2 richting)
         {
             if(this.Dood == false)
